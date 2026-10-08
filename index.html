@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pickled Sticker | Handmade Sublimation Tumblers</title>
+  <meta name="description" content="Handmade sublimation tumblers from Pickled Sticker. Bright designs, personalized names, shipped to your door.">
+  <link rel="icon" href="images/pickle-party.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="#top" class="brand" id="top">
+      <span class="brand-mark" aria-hidden="true">🥒</span>
+      <span class="brand-name" data-shop-name>Pickled Sticker</span>
+    </a>
+    <nav class="nav">
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#custom">Custom orders</a>
+      <a href="#policies">Shipping &amp; returns</a>
+    </nav>
+    <button class="cart-button" id="cartButton" aria-label="Open cart">
+      🛒 Cart <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1 data-shop-name>Pickled Sticker</h1>
+      <p class="tagline" id="tagline"></p>
+      <a href="#shop" class="btn btn-primary">Shop tumblers</a>
+    </section>
+
+    <section id="shop" class="section">
+      <h2>Shop</h2>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section id="about" class="section about">
+      <h2>About us</h2>
+      <p>
+        We're a husband and wife team making every tumbler by hand with sublimation printing,
+        which bakes the design right into the coating so it won't peel or fade.
+        <!-- Master: replace this paragraph with your own story. -->
+      </p>
+    </section>
+
+    <section id="custom" class="section">
+      <h2>Custom orders</h2>
+      <p>
+        Want a design that isn't listed, a gift set, or a bulk order for a team or event?
+        Email us and we'll work it out together.
+      </p>
+      <p><a class="btn" id="contactLink" href="#">Email us</a></p>
+    </section>
+
+    <section id="policies" class="section policies">
+      <h2>Shipping &amp; returns</h2>
+      <ul>
+        <li>Most orders ship within 3–5 business days. Personalized tumblers may take a little longer.</li>
+        <li id="shippingPolicy"></li>
+        <li>Hand wash only. Do not microwave. Not dishwasher safe.</li>
+        <li>Personalized items can't be returned. If anything arrives damaged, email us a photo within 7 days and we'll make it right.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> <span data-shop-name>Pickled Sticker</span>. Secure checkout by PayPal.</p>
+    <p id="socialLinks"></p>
+  </footer>
+
+  <!-- Cart drawer -->
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" hidden>
+    <div class="cart-head">
+      <h2>Your cart</h2>
+      <button class="icon-btn" id="closeCart" aria-label="Close cart">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-totals" id="cartTotals"></div>
+    <div id="checkoutNotice" class="notice" hidden></div>
+    <div id="paypal-button-container"></div>
+  </aside>
+
+  <!-- Thank-you popup -->
+  <div class="modal" id="thanksModal" hidden>
+    <div class="modal-card">
+      <h2>Thank you! 🎉</h2>
+      <p>Your order went through. You'll get a receipt from PayPal by email.</p>
+      <p class="small">Order ID: <strong id="orderId"></strong></p>
+      <button class="btn btn-primary" id="closeThanks">Keep shopping</button>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
