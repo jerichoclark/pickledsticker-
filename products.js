@@ -140,7 +140,7 @@ window.PRODUCTS = [
     price: 19.99,
     size: "20 oz skinny",
     description: "For the guy who's been 'checking the burgers' for 45 minutes.",
-    image: "images/grill-master.svg",
+    image: "images/grill-master.jpg",
     inStock: true,
     personalize: false,
     badge: "Dad fave",
