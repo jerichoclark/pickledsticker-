@@ -6,7 +6,7 @@
 window.SHOP_CONFIG = {
   // Your shop's name, shown at the top of every page.
   shopName: "Pickled Sticker",
-  tagline: "Handmade sublimation tumblers, pressed with love by a husband & wife team.",
+  tagline: "Bright, handmade sublimation tumblers that won't peel or fade. Personalize yours or grab one as the perfect gift.",
 
   // ---- PAYPAL ----
   // Paste your PayPal "Client ID" between the quotes below.

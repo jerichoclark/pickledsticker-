@@ -79,11 +79,11 @@ h1, h2, h3 { font-family: var(--display); line-height: 1.15; }
     radial-gradient(circle at 10% 10%, #fff1c7 0, transparent 35%);
 }
 .eyebrow { display: inline-block; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; font-weight: 700; font-size: .85rem; color: var(--pink-dark); margin: 0 0 18px; }
-.hero h1 { font-size: clamp(2.6rem, 7vw, 4.6rem); margin: 0 0 14px; }
+.hero h1 { font-size: clamp(2.3rem, 5.6vw, 3.9rem); margin: 0 0 14px; }
 .pop {
   background: linear-gradient(90deg, var(--pink), var(--lilac));
   -webkit-background-clip: text; background-clip: text; color: transparent;
-  display: inline-block; transform: rotate(-3deg);
+  display: inline;
 }
 .tagline { font-size: 1.15rem; color: var(--muted); max-width: 480px; margin: 0 0 26px; }
 .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
