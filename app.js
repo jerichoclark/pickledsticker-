@@ -39,7 +39,9 @@
     if (existing) existing.qty += 1;
     else cart.push({ id, qty: 1, note });
     saveCart();
-    toast("Added to cart");
+    toast("Added to your bag 💖");
+    const c = $("cartCount");
+    c.classList.remove("bump"); void c.offsetWidth; c.classList.add("bump");
   }
 
   function totals() {
@@ -54,6 +56,11 @@
   function fillShopText() {
     document.querySelectorAll("[data-shop-name]").forEach((el) => (el.textContent = CFG.shopName));
     $("tagline").textContent = CFG.tagline;
+    $("announceText").textContent = CFG.freeShippingOver > 0
+      ? `Free shipping on orders $${CFG.freeShippingOver}+`
+      : "Handmade with love";
+    const pz = PRODUCTS.find((p) => p.personalize && p.inStock);
+    if (pz) $("personalizeCta").href = "#personalize-" + pz.id;
     $("year").textContent = new Date().getFullYear();
 
     const ship = [`Shipping is a flat ${fmt(toCents(CFG.flatShipping))} per order.`];
@@ -64,7 +71,7 @@
     const contact = $("contactLink");
     if (emailSet) {
       contact.href = "mailto:" + CFG.contactEmail;
-      contact.textContent = "Email " + CFG.contactEmail;
+      contact.textContent = "Ask about custom & bulk orders 💌";
     } else {
       contact.removeAttribute("href");
       contact.textContent = "Email address coming soon";
@@ -84,17 +91,22 @@
       const card = document.createElement("article");
       card.className = "product";
       card.innerHTML = `
-        <img src="${p.image}" alt="${escapeHtml(p.name)} tumbler" loading="lazy">
+        ${p.badge ? `<span class="badge ${badgeClass(p.badge)}">${escapeHtml(p.badge)}</span>` : ""}
+        <div class="img-wrap"><img src="${p.image}" alt="${escapeHtml(p.name)} tumbler" loading="lazy"></div>
         <div class="product-body">
           <h3>${escapeHtml(p.name)}</h3>
           <p class="meta">${escapeHtml(p.size || "")}</p>
           <p class="desc">${escapeHtml(p.description || "")}</p>
-          ${p.personalize && p.inStock ? `<input type="text" maxlength="100" placeholder="Name or text to add (optional)" aria-label="Personalization for ${escapeHtml(p.name)}">` : ""}
-          <div class="price">${fmt(toCents(p.price))}</div>
-          ${p.inStock
-            ? `<button class="btn btn-primary">Add to cart</button>`
-            : `<span class="sold-out">Sold out</span>`}
+          ${p.personalize && p.inStock ? `<input type="text" maxlength="100" placeholder="✍️ Name or text to add (optional)" aria-label="Personalization for ${escapeHtml(p.name)}">` : ""}
+          <div class="buy-row">
+            <span class="price">${fmt(toCents(p.price))}</span>
+            ${p.inStock
+              ? `<button class="btn btn-primary">Add to bag</button>`
+              : `<span class="sold-out">Sold out</span>`}
+          </div>
         </div>`;
+      card.classList.add("reveal");
+      if (p.personalize) card.id = "personalize-" + p.id;
       const btn = card.querySelector("button");
       if (btn) {
         btn.addEventListener("click", () => {
@@ -112,7 +124,8 @@
     $("cartCount").textContent = cart.reduce((n, l) => n + l.qty, 0);
     const box = $("cartItems");
     if (!cart.length) {
-      box.innerHTML = `<p class="empty">Your cart is empty. Go pick a tumbler! 🥒</p>`;
+      box.innerHTML = `<p class="empty">Your bag is empty. Go find your new favorite tumbler! 🥤</p>`;
+      $("shipMeter").innerHTML = "";
       $("cartTotals").innerHTML = "";
       $("paypal-button-container").style.display = "none";
       return;
@@ -141,10 +154,37 @@
       box.appendChild(row);
     });
     const t = totals();
+    renderShipMeter(t);
     $("cartTotals").innerHTML = `
       <div class="row"><span>Subtotal</span><span>${fmt(t.itemsCents)}</span></div>
       <div class="row"><span>Shipping</span><span>${t.shipCents ? fmt(t.shipCents) : "Free"}</span></div>
       <div class="row total"><span>Total</span><span>${fmt(t.totalCents)}</span></div>`;
+  }
+
+  function renderShipMeter(t) {
+    const goal = toCents(CFG.freeShippingOver || 0);
+    if (!goal) { $("shipMeter").innerHTML = ""; return; }
+    const pct = Math.min(100, Math.round((t.itemsCents / goal) * 100));
+    const msg = t.itemsCents >= goal
+      ? "🎉 You unlocked FREE shipping!"
+      : `You're ${fmt(goal - t.itemsCents)} away from free shipping 🚚`;
+    $("shipMeter").innerHTML = `${msg}<div class="bar"><div class="fill" style="width:${pct}%"></div></div>`;
+  }
+
+  function badgeClass(b) {
+    const k = b.toLowerCase();
+    if (k.includes("new")) return "new";
+    if (k.includes("fave") || k.includes("love") || k.includes("best")) return "fave";
+    return "";
+  }
+
+  function setupReveal() {
+    const els = document.querySelectorAll(".reveal");
+    if (!("IntersectionObserver" in window)) { els.forEach((e) => e.classList.add("shown")); return; }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("shown"); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    els.forEach((e) => io.observe(e));
   }
 
   function openCart() { $("overlay").hidden = false; $("cartDrawer").hidden = false; }
@@ -237,6 +277,7 @@
   fillShopText();
   renderProducts();
   renderCart();
+  setupReveal();
   $("cartButton").onclick = openCart;
   $("closeCart").onclick = closeCart;
   $("overlay").onclick = closeCart;

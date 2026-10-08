@@ -4,11 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pickled Sticker | Handmade Sublimation Tumblers</title>
-  <meta name="description" content="Handmade sublimation tumblers from Pickled Sticker. Bright designs, personalized names, shipped to your door.">
+  <meta name="description" content="Bright, handmade sublimation tumblers from Pickled Sticker. Personalized names, gift-ready, shipped to your door.">
+  <meta property="og:title" content="Pickled Sticker | Handmade Tumblers">
+  <meta property="og:description" content="Cute, bright, handmade tumblers. Personalize yours or grab a gift.">
+  <meta property="og:image" content="images/pickle-party.svg">
   <link rel="icon" href="images/pickle-party.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="announce" id="announce">✨ <span id="announceText">Handmade with love</span> ✨</div>
+
   <header class="site-header">
     <a href="#top" class="brand" id="top">
       <span class="brand-mark" aria-hidden="true">🥒</span>
@@ -16,68 +24,96 @@
     </a>
     <nav class="nav">
       <a href="#shop">Shop</a>
-      <a href="#about">About</a>
-      <a href="#custom">Custom orders</a>
-      <a href="#policies">Shipping &amp; returns</a>
+      <a href="#gifts">Gifts</a>
+      <a href="#about">Our story</a>
+      <a href="#policies">Shipping</a>
     </nav>
     <button class="cart-button" id="cartButton" aria-label="Open cart">
-      🛒 Cart <span class="cart-count" id="cartCount">0</span>
+      <span aria-hidden="true">🛍️</span> Bag <span class="cart-count" id="cartCount">0</span>
     </button>
   </header>
 
   <main>
     <section class="hero">
-      <h1 data-shop-name>Pickled Sticker</h1>
-      <p class="tagline" id="tagline"></p>
-      <a href="#shop" class="btn btn-primary">Shop tumblers</a>
+      <div class="hero-text">
+        <p class="eyebrow">Handmade · Small batch · Made to sparkle</p>
+        <h1>Sip in style, <span class="pop">babe.</span></h1>
+        <p class="tagline" id="tagline"></p>
+        <div class="hero-ctas">
+          <a href="#shop" class="btn btn-primary">Shop tumblers</a>
+          <a href="#shop" class="btn btn-ghost" id="personalizeCta">Make it personal ✍️</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <img class="float f1" src="images/floral-dream.svg" alt="">
+        <img class="float f2" src="images/pickle-party.svg" alt="">
+        <img class="float f3" src="images/sunset-glow.svg" alt="">
+        <span class="sparkle s1">✦</span><span class="sparkle s2">✧</span><span class="sparkle s3">✦</span>
+      </div>
+    </section>
+
+    <section class="perks" aria-label="Why shop with us">
+      <div class="perk"><span>🎨</span><div><strong>Won't peel or fade</strong><small>Ink baked right into the coating</small></div></div>
+      <div class="perk"><span>💖</span><div><strong>Personalize it</strong><small>Add a name or cute phrase</small></div></div>
+      <div class="perk"><span>🎁</span><div><strong>Gift-ready</strong><small>Packed with care</small></div></div>
+      <div class="perk"><span>🔒</span><div><strong>Secure checkout</strong><small>Pay safely with PayPal</small></div></div>
     </section>
 
     <section id="shop" class="section">
-      <h2>Shop</h2>
+      <div class="section-head">
+        <h2>Shop the drop</h2>
+        <p>Fresh designs, pressed by hand in our little home studio.</p>
+      </div>
       <div class="product-grid" id="productGrid"></div>
     </section>
 
+    <section id="gifts" class="section gifts">
+      <div class="gift-card">
+        <h2>The gift she'll actually use 🎀</h2>
+        <p>Teacher thank-yous, bridesmaid boxes, Mother's Day, birthdays, besties. Add her name and you're the favorite.</p>
+        <div class="chips">
+          <span>👩‍🏫 Teachers</span><span>👰 Bridal party</span><span>🌷 Mother's Day</span><span>🎂 Birthdays</span><span>⚽ Team moms</span>
+        </div>
+        <a class="btn btn-primary" id="contactLink" href="#">Ask about custom &amp; bulk orders</a>
+      </div>
+    </section>
+
     <section id="about" class="section about">
-      <h2>About us</h2>
+      <div class="section-head">
+        <h2>Hi, we're Pickled Sticker 👋</h2>
+      </div>
       <p>
         We're a husband and wife team making every tumbler by hand with sublimation printing,
         which bakes the design right into the coating so it won't peel or fade.
+        Every order is pressed, checked and packed by us.
         <!-- Master: replace this paragraph with your own story. -->
       </p>
     </section>
 
-    <section id="custom" class="section">
-      <h2>Custom orders</h2>
-      <p>
-        Want a design that isn't listed, a gift set, or a bulk order for a team or event?
-        Email us and we'll work it out together.
-      </p>
-      <p><a class="btn" id="contactLink" href="#">Email us</a></p>
-    </section>
-
     <section id="policies" class="section policies">
-      <h2>Shipping &amp; returns</h2>
-      <ul>
-        <li>Most orders ship within 3–5 business days. Personalized tumblers may take a little longer.</li>
-        <li id="shippingPolicy"></li>
-        <li>Hand wash only. Do not microwave. Not dishwasher safe.</li>
-        <li>Personalized items can't be returned. If anything arrives damaged, email us a photo within 7 days and we'll make it right.</li>
-      </ul>
+      <div class="section-head"><h2>Shipping &amp; care</h2></div>
+      <div class="policy-grid">
+        <div class="policy"><h3>📦 Shipping</h3><p>Most orders ship within 3–5 business days. Personalized tumblers may take a little longer.</p><p id="shippingPolicy"></p></div>
+        <div class="policy"><h3>🧽 Care</h3><p>Hand wash only. Do not microwave. Not dishwasher safe.</p></div>
+        <div class="policy"><h3>💌 Returns</h3><p>Personalized items can't be returned. If anything arrives damaged, email us a photo within 7 days and we'll make it right.</p></div>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>&copy; <span id="year"></span> <span data-shop-name>Pickled Sticker</span>. Secure checkout by PayPal.</p>
+    <p class="footer-brand">🥒 <span data-shop-name>Pickled Sticker</span></p>
     <p id="socialLinks"></p>
+    <p class="small">&copy; <span id="year"></span> <span data-shop-name>Pickled Sticker</span>. Secure checkout by PayPal.</p>
   </footer>
 
   <!-- Cart drawer -->
   <div class="overlay" id="overlay" hidden></div>
-  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" hidden>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping bag" hidden>
     <div class="cart-head">
-      <h2>Your cart</h2>
-      <button class="icon-btn" id="closeCart" aria-label="Close cart">✕</button>
+      <h2>Your bag</h2>
+      <button class="icon-btn" id="closeCart" aria-label="Close bag">✕</button>
     </div>
+    <div class="ship-meter" id="shipMeter"></div>
     <div class="cart-items" id="cartItems"></div>
     <div class="cart-totals" id="cartTotals"></div>
     <div id="checkoutNotice" class="notice" hidden></div>
@@ -87,7 +123,8 @@
   <!-- Thank-you popup -->
   <div class="modal" id="thanksModal" hidden>
     <div class="modal-card">
-      <h2>Thank you! 🎉</h2>
+      <div class="confetti" aria-hidden="true">🎉</div>
+      <h2>Yay, it's yours!</h2>
       <p>Your order went through. You'll get a receipt from PayPal by email.</p>
       <p class="small">Order ID: <strong id="orderId"></strong></p>
       <button class="btn btn-primary" id="closeThanks">Keep shopping</button>

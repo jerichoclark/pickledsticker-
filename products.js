@@ -12,6 +12,7 @@
 //  image       the photo file inside the "images" folder
 //  inStock     true = can be bought, false = shows "Sold out"
 //  personalize true = shows a box where the buyer can type a name/text
+//  badge       a little sticker on the photo, like "New" or "Our fave" (use "" for none)
 // =====================================================================
 
 window.PRODUCTS = [
@@ -24,6 +25,7 @@ window.PRODUCTS = [
     image: "images/pickle-party.svg",
     inStock: true,
     personalize: false,
+    badge: "Our fave",
   },
   {
     id: "sunset-glow",
@@ -34,6 +36,7 @@ window.PRODUCTS = [
     image: "images/sunset-glow.svg",
     inStock: true,
     personalize: false,
+    badge: "",
   },
   {
     id: "ocean-swirl",
@@ -44,6 +47,7 @@ window.PRODUCTS = [
     image: "images/ocean-swirl.svg",
     inStock: true,
     personalize: false,
+    badge: "New",
   },
   {
     id: "floral-dream",
@@ -54,6 +58,7 @@ window.PRODUCTS = [
     image: "images/floral-dream.svg",
     inStock: true,
     personalize: false,
+    badge: "New",
   },
   {
     id: "midnight-stars",
@@ -64,6 +69,7 @@ window.PRODUCTS = [
     image: "images/midnight-stars.svg",
     inStock: true,
     personalize: false,
+    badge: "",
   },
   {
     id: "custom-name",
@@ -74,5 +80,6 @@ window.PRODUCTS = [
     image: "images/custom-name.svg",
     inStock: true,
     personalize: true,
+    badge: "Personalize it",
   },
 ];
