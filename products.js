@@ -119,6 +119,19 @@ window.PRODUCTS = [
     badge: "New",
   },
 
+  {
+    shop: "mom",
+    id: "womans-best-friend",
+    name: "Woman's Best Friend",
+    price: 19.99,
+    size: "20 oz skinny",
+    description: "Happy golden retriever cozied up on a couch with a knit blanket.",
+    image: "images/womans-best-friend.jpg",
+    inStock: true,
+    personalize: false,
+    badge: "New",
+  },
+
   // ---------------------------- DAD ----------------------------
   {
     shop: "dad",
