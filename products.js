@@ -152,7 +152,7 @@ window.PRODUCTS = [
     price: 19.99,
     size: "20 oz skinny",
     description: "Lake days, early mornings, and the one that got away.",
-    image: "images/fishing-buddy.svg",
+    image: "images/fishing-buddy.jpg",
     inStock: true,
     personalize: false,
     badge: "",
