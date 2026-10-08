@@ -99,7 +99,6 @@
         <div class="product-body">
           <h3>${escapeHtml(p.name)}</h3>
           <p class="meta">${escapeHtml(p.size || "")}</p>
-          <p class="desc">${escapeHtml(p.description || "")}</p>
           ${p.personalize && p.inStock ? `<input type="text" maxlength="100" placeholder="${escapeHtml(p.personalizeHint || "Name or text to add (optional)")}" aria-label="Personalization for ${escapeHtml(p.name)}">` : ""}
           <div class="buy-row">
             <span class="price">${fmt(toCents(p.price))}</span>

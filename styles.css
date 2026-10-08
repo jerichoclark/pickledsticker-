@@ -449,3 +449,5 @@ h1, h2, h3 { font-family: var(--display); line-height: 1.15; }
   .theme-dad .brand { font-size: 1.12rem; }
   .theme-dad .brand-mark { font-size: 1.35rem; }
 }
+.product-body { gap: 6px; }
+.product .buy-row { margin-top: auto; padding-top: 8px; }

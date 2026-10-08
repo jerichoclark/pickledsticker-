@@ -9,7 +9,7 @@
 //  name        what customers see
 //  price       in dollars, no $ sign (e.g. 29.99)
 //  size        e.g. "20 oz skinny"
-//  description a sentence or two about the design
+//  description a short note about the design (kept for your records; not shown on the shop cards)
 //  image       the photo file inside the "images" folder
 //  inStock     true = can be bought, false = shows "Sold out"
 //  personalize true = shows a box where the buyer can type a name/text
@@ -23,13 +23,13 @@ window.PRODUCTS = [
     shop: "mom",
     id: "pickle-party",
     name: "Pickle Party",
-    price: 29.99,
+    price: 14.99,
     size: "20 oz skinny",
-    description: "Our signature dill-icious design. Bright, bold, and a little bit sour.",
-    image: "images/pickle-party.svg",
+    description: "Our signature Pickled Sticker brand cup.",
+    image: "images/pickle-party.png",
     inStock: true,
     personalize: false,
-    badge: "Our fave",
+    badge: "Our brand cup",
   },
   {
     shop: "mom",
