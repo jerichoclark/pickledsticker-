@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop Mom | Pickled Sticker</title>
+  <meta name="description" content="Bright, cute handmade tumblers for Mom. Personalize with her name or the kids' names.">
+  <meta property="og:title" content="Shop Mom | Pickled Sticker">
+  <meta property="og:description" content="Bright, cute handmade tumblers for Mom. Personalize with her name or the kids' names.">
+  <meta property="og:image" content="images/floral-dream.svg">
+  <link rel="icon" href="images/pickle-party.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-mom page-shop" data-shop="mom">
+  <div class="announce">✨ <span id="announceText">Handmade with love</span> ✨</div>
+
+  <header class="site-header">
+    <a href="index.html" class="brand">
+      <span class="brand-mark" aria-hidden="true">🥒</span>
+      <span class="brand-name" data-shop-name>Pickled Sticker</span>
+    </a>
+    <nav class="nav tabs" aria-label="Shops">
+      <a href="mom.html" class="active" aria-current="page">Mom</a>
+      <a href="dad.html">Dad</a>
+      <a href="custom.html">Custom</a>
+      <a href="index.html#about">Our story</a>
+    </nav>
+    <button class="cart-button" id="cartButton" aria-label="Open bag">
+      <span aria-hidden="true">🛍️</span> Bag <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="shop-hero">
+      <p class="eyebrow">💐 The Mom Shop</p>
+      <h1>Tumblers as <span class="pop">fun as she is.</span></h1>
+      <p class="tagline">Bright colors, cute designs, and her name if you want it. Made to be carried everywhere.</p>
+    </section>
+
+    <section class="perks" aria-label="Why shop with us">
+      <div class="perk"><span>🎨</span><div><strong>Won't peel or fade</strong><small>Ink baked right into the coating</small></div></div>
+      <div class="perk"><span>💖</span><div><strong>Personalize it</strong><small>Add a name or cute phrase</small></div></div>
+      <div class="perk"><span>🎁</span><div><strong>Gift-ready</strong><small>Packed with care</small></div></div>
+      <div class="perk"><span>🔒</span><div><strong>Secure checkout</strong><small>Pay safely with PayPal</small></div></div>
+    </section>
+
+    <section id="shop" class="section">
+      <div class="section-head">
+        <h2>Shop Mom</h2>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="section other-shops">
+      <h2>Keep browsing</h2>
+      <div class="mini-tabs">
+        <a class="mini-tab mini-dad" href="dad.html"><span>🍔</span> Shop Dad</a>
+        <a class="mini-tab mini-custom" href="custom.html"><span>✦</span> Shop Custom</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-brand">🥒 <span data-shop-name>Pickled Sticker</span></p>
+    <p class="footer-links"><a href="mom.html">Mom</a> · <a href="dad.html">Dad</a> · <a href="custom.html">Custom</a> · <a href="index.html#policies">Shipping &amp; care</a></p>
+    <p id="socialLinks"></p>
+    <p class="small">&copy; <span id="year"></span> <span data-shop-name>Pickled Sticker</span>. Secure checkout by PayPal.</p>
+  </footer>
+
+  <!-- Shopping bag (shared by every page) -->
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping bag" hidden>
+    <div class="cart-head">
+      <h2>Your bag</h2>
+      <button class="icon-btn" id="closeCart" aria-label="Close bag">✕</button>
+    </div>
+    <div class="ship-meter" id="shipMeter"></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-totals" id="cartTotals"></div>
+    <div id="checkoutNotice" class="notice" hidden></div>
+    <div id="paypal-button-container"></div>
+  </aside>
+
+  <!-- Thank-you popup -->
+  <div class="modal" id="thanksModal" hidden>
+    <div class="modal-card">
+      <div class="confetti" aria-hidden="true">🎉</div>
+      <h2>Yay, it's yours!</h2>
+      <p>Your order went through. You'll get a receipt from PayPal by email.</p>
+      <p class="small">Order ID: <strong id="orderId"></strong></p>
+      <button class="btn btn-primary" id="closeThanks">Keep shopping</button>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

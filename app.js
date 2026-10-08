@@ -55,26 +55,27 @@
   // ---------- page text from config ----------
   function fillShopText() {
     document.querySelectorAll("[data-shop-name]").forEach((el) => (el.textContent = CFG.shopName));
-    $("tagline").textContent = CFG.tagline;
+    if ($("tagline")) $("tagline").textContent = CFG.tagline;
     $("announceText").textContent = CFG.freeShippingOver > 0
       ? `Free shipping on orders $${CFG.freeShippingOver}+`
       : "Handmade with love";
-    const pz = PRODUCTS.find((p) => p.personalize && p.inStock);
-    if (pz) $("personalizeCta").href = "#personalize-" + pz.id;
     $("year").textContent = new Date().getFullYear();
 
-    const ship = [`Shipping is a flat ${fmt(toCents(CFG.flatShipping))} per order.`];
-    if (CFG.freeShippingOver > 0) ship.push(`Free shipping on orders of ${fmt(toCents(CFG.freeShippingOver))} or more.`);
-    $("shippingPolicy").textContent = ship.join(" ");
+    if ($("shippingPolicy")) {
+      const ship = [`Shipping is a flat ${fmt(toCents(CFG.flatShipping))} per order.`];
+      if (CFG.freeShippingOver > 0) ship.push(`Free shipping on orders of ${fmt(toCents(CFG.freeShippingOver))} or more.`);
+      $("shippingPolicy").textContent = ship.join(" ");
+    }
 
     const emailSet = CFG.contactEmail && !CFG.contactEmail.startsWith("PASTE_");
     const contact = $("contactLink");
-    if (emailSet) {
-      contact.href = "mailto:" + CFG.contactEmail;
-      contact.textContent = "Ask about custom & bulk orders 💌";
-    } else {
-      contact.removeAttribute("href");
-      contact.textContent = "Email address coming soon";
+    if (contact) {
+      if (emailSet) {
+        contact.href = "mailto:" + CFG.contactEmail;
+      } else {
+        contact.removeAttribute("href");
+        contact.textContent = "Email address coming soon";
+      }
     }
 
     const social = [];
@@ -86,8 +87,10 @@
   // ---------- product grid ----------
   function renderProducts() {
     const grid = $("productGrid");
+    if (!grid) return; // the cover page has no product grid
+    const shop = document.body.dataset.shop;
     grid.innerHTML = "";
-    PRODUCTS.forEach((p) => {
+    PRODUCTS.filter((p) => !shop || p.shop === shop).forEach((p) => {
       const card = document.createElement("article");
       card.className = "product";
       card.innerHTML = `
@@ -97,7 +100,7 @@
           <h3>${escapeHtml(p.name)}</h3>
           <p class="meta">${escapeHtml(p.size || "")}</p>
           <p class="desc">${escapeHtml(p.description || "")}</p>
-          ${p.personalize && p.inStock ? `<input type="text" maxlength="100" placeholder="✍️ Name or text to add (optional)" aria-label="Personalization for ${escapeHtml(p.name)}">` : ""}
+          ${p.personalize && p.inStock ? `<input type="text" maxlength="100" placeholder="${escapeHtml(p.personalizeHint || "Name or text to add (optional)")}" aria-label="Personalization for ${escapeHtml(p.name)}">` : ""}
           <div class="buy-row">
             <span class="price">${fmt(toCents(p.price))}</span>
             ${p.inStock
@@ -106,7 +109,6 @@
           </div>
         </div>`;
       card.classList.add("reveal");
-      if (p.personalize) card.id = "personalize-" + p.id;
       const btn = card.querySelector("button");
       if (btn) {
         btn.addEventListener("click", () => {

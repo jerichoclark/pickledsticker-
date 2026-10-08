@@ -255,3 +255,197 @@ h1, h2, h3 { font-family: var(--display); line-height: 1.15; }
   .hero { padding-left: 16px; padding-right: 16px; }
   .gift-card { padding: 36px 20px; border-radius: 26px; }
 }
+
+/* =====================================================================
+   SHOP TABS, SHOP PAGES, AND THE DAD / CUSTOM THEMES
+   ===================================================================== */
+
+/* Header tabs */
+.tabs a.active { color: var(--pink-dark); }
+.tabs a.active::after { right: 0; }
+
+/* Shop page hero */
+.shop-hero { text-align: center; padding: 56px 24px 36px; position: relative; }
+.shop-hero::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background:
+    radial-gradient(circle at 80% 20%, var(--blush) 0, transparent 45%),
+    radial-gradient(circle at 15% 80%, var(--mint-soft) 0, transparent 40%),
+    radial-gradient(circle at 10% 10%, #fff1c7 0, transparent 35%);
+}
+.shop-hero h1 { font-size: clamp(2.3rem, 6vw, 3.8rem); margin: 0 0 12px; }
+.shop-hero .tagline { margin: 0 auto; }
+.page-shop .perks { margin-top: 8px; }
+
+/* Cover: the three big shop tabs */
+.shop-tabs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.shop-tab {
+  display: flex; flex-direction: column; text-decoration: none; overflow: hidden;
+  border-radius: var(--radius); box-shadow: var(--shadow); transition: transform .2s, box-shadow .2s;
+}
+.shop-tab:hover { transform: translateY(-6px) rotate(-.5deg); box-shadow: var(--shadow-hover); }
+.shop-tab img { aspect-ratio: 4 / 3; object-fit: contain; padding: 18px 0 0; transition: transform .4s; }
+.shop-tab:hover img { transform: scale(1.06) rotate(-3deg); }
+.shop-tab > div { padding: 18px 22px 24px; }
+.shop-tab h3 { margin: 4px 0 6px; font-size: 2.2rem; }
+.shop-tab p { margin: 0 0 14px; }
+.tab-kicker { font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+.tab-go { font-weight: 700; }
+.tab-mom { background: linear-gradient(160deg, var(--blush), #fff); color: var(--ink); }
+.tab-mom h3 { font-family: "Fredoka", sans-serif; color: var(--pink); }
+.tab-mom .tab-kicker, .tab-mom .tab-go { color: var(--pink-dark); }
+.tab-dad { background: #1e2a3a; color: #f3efe6; border: 3px solid #1e2a3a; }
+.tab-dad h3 { font-family: "Archivo Black", Impact, sans-serif; color: #ff7a1a; text-transform: uppercase; letter-spacing: .02em; }
+.tab-dad .tab-kicker, .tab-dad .tab-go { color: #f2b134; }
+.tab-custom { background: #111; color: #e9e2d6; border-radius: 6px; }
+.tab-custom h3 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 500; font-style: italic; font-size: 2.6rem; color: #fff; }
+.tab-custom .tab-kicker, .tab-custom .tab-go { color: #c9b28a; letter-spacing: .18em; font-weight: 500; }
+
+/* "Keep browsing" mini tabs */
+.other-shops { text-align: center; padding-top: 10px; }
+.other-shops h2 { font-size: 1.8rem; margin: 0 0 16px; }
+.mini-tabs { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.mini-tab { padding: 14px 24px; border-radius: 999px; font-weight: 700; text-decoration: none; transition: transform .15s; }
+.mini-tab:hover { transform: translateY(-2px); }
+.mini-mom { background: var(--blush); color: #e0336f; font-family: "Fredoka", sans-serif; }
+.mini-dad { background: #1e2a3a; color: #f2b134; font-family: "Archivo Black", Impact, sans-serif; text-transform: uppercase; }
+.mini-custom { background: #111; color: #e9e2d6; letter-spacing: .12em; text-transform: uppercase; font-size: .9rem; }
+
+/* Custom: how it works */
+.steps { list-style: none; padding: 0; margin: 0 auto 26px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; counter-reset: step; max-width: 1000px; }
+.steps li { background: var(--card); padding: 24px; border-radius: var(--radius); box-shadow: var(--shadow); counter-increment: step; }
+.steps li::before { content: "0" counter(step); display: block; font-family: var(--display); font-size: 2rem; color: var(--pink); margin-bottom: 6px; }
+.steps strong { display: block; font-size: 1.1rem; margin-bottom: 4px; }
+.steps span { color: var(--muted); }
+.center { text-align: center; }
+
+/* ---------------------------- DAD THEME ----------------------------
+   Bold, rugged and fun: kraft-paper background, navy, safety orange,
+   mustard, chunky type and retro "sticker" cards with hard shadows. */
+.theme-dad {
+  --pink: #ff7a1a;
+  --pink-dark: #e0610a;
+  --blush: #ffe6d1;
+  --mint: #6b7d3c;
+  --mint-soft: #e4e8d3;
+  --sun: #f2b134;
+  --lilac: #3d6a99;
+  --cream: #f3efe6;
+  --ink: #1e2a3a;
+  --muted: #55606e;
+  --line: #d9d1bf;
+  --radius: 10px;
+  --shadow: 5px 5px 0 #1e2a3a;
+  --shadow-hover: 9px 9px 0 #1e2a3a;
+  --display: "Archivo Black", Impact, "Arial Black", sans-serif;
+  background-image: repeating-linear-gradient(135deg, rgba(30,42,58,.025) 0 12px, transparent 12px 24px);
+}
+.theme-dad .announce { background: #1e2a3a; color: #f2b134; letter-spacing: .08em; text-transform: uppercase; }
+.theme-dad .site-header { background: rgba(243,239,230,.92); border-bottom: 3px solid #1e2a3a; }
+.theme-dad h1, .theme-dad h2, .theme-dad h3 { text-transform: uppercase; letter-spacing: .01em; font-weight: 400; }
+.theme-dad .brand { text-transform: none; }
+.theme-dad .shop-hero { background: #1e2a3a; color: #f3efe6; border-bottom: 6px solid #ff7a1a; padding: 64px 24px 52px; }
+.theme-dad .shop-hero::before { display: none; }
+.theme-dad .shop-hero .tagline { color: #cfd6df; }
+.theme-dad .shop-hero .eyebrow { background: #f2b134; color: #1e2a3a; border: 0; text-transform: uppercase; letter-spacing: .08em; }
+.theme-dad .pop { background: none; color: #ff7a1a; -webkit-text-fill-color: #ff7a1a; }
+.theme-dad .perks { margin-top: -26px; position: relative; }
+.theme-dad .perk, .theme-dad .product, .theme-dad .policy, .theme-dad .steps li { border: 3px solid #1e2a3a; }
+.theme-dad .product .img-wrap { background: repeating-linear-gradient(45deg, #ece4d2 0 14px, #e4dac4 14px 28px); border-bottom: 3px solid #1e2a3a; }
+.theme-dad .product:hover img { transform: scale(1.05) rotate(3deg); }
+.theme-dad .badge { border: 2px solid #1e2a3a; box-shadow: 2px 2px 0 #1e2a3a; border-radius: 6px; }
+.theme-dad .btn { border-radius: 8px; text-transform: uppercase; letter-spacing: .05em; border-width: 3px; }
+.theme-dad .btn-primary { box-shadow: 3px 3px 0 #1e2a3a; border-color: #1e2a3a; }
+.theme-dad .btn-primary:hover { box-shadow: 5px 5px 0 #1e2a3a; }
+.theme-dad .product input[type=text] { border: 2px dashed #1e2a3a; background: #fffaf0; border-radius: 8px; }
+.theme-dad .cart-button { border-radius: 8px; }
+.theme-dad .cart-line, .theme-dad .icon-btn { border: 2px solid #1e2a3a; box-shadow: none; }
+.theme-dad .cart-drawer { border-radius: 0; border-left: 4px solid #1e2a3a; }
+.theme-dad .site-footer { border-top: 6px solid #ff7a1a; }
+.theme-dad .site-footer a { color: #f2b134; }
+.theme-dad .tabs a.active { color: #e0610a; }
+
+/* --------------------------- CUSTOM THEME --------------------------
+   Sleek and minimal: warm off-white, black, champagne gold accents,
+   elegant serif headings, square corners and lots of breathing room. */
+.theme-custom {
+  --pink: #111111;
+  --pink-dark: #000000;
+  --blush: #efe9df;
+  --mint: #b08d57;
+  --mint-soft: #f4efe6;
+  --sun: #c9b28a;
+  --lilac: #8a7a66;
+  --cream: #f7f4ef;
+  --ink: #111111;
+  --muted: #6f6a63;
+  --line: #e2dcd2;
+  --card: #ffffff;
+  --radius: 4px;
+  --shadow: 0 1px 0 rgba(0,0,0,.04);
+  --shadow-hover: 0 20px 40px rgba(0,0,0,.08);
+  --display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  letter-spacing: .005em;
+}
+.theme-custom .announce { background: #111; color: #c9b28a; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; font-size: .75rem; }
+.theme-custom .site-header { background: rgba(247,244,239,.92); }
+.theme-custom .brand-name { font-family: var(--body); font-weight: 600; letter-spacing: .14em; text-transform: uppercase; font-size: 1rem; }
+.theme-custom .nav a { font-weight: 500; text-transform: uppercase; letter-spacing: .14em; font-size: .82rem; }
+.theme-custom .nav a::after { height: 1px; background: #111; }
+.theme-custom .tabs a.active { color: #111; }
+.theme-custom h1, .theme-custom h2, .theme-custom h3 { font-weight: 500; }
+.theme-custom .shop-hero { padding: 90px 24px 70px; }
+.theme-custom .shop-hero::before { background: linear-gradient(180deg, #efe9df, transparent); }
+.theme-custom .shop-hero h1 { font-size: clamp(2.6rem, 7vw, 4.6rem); line-height: 1.05; }
+.theme-custom .pop { background: none; color: #b08d57; -webkit-text-fill-color: #b08d57; font-style: italic; }
+.theme-custom .eyebrow { background: none; border: 0; border-bottom: 1px solid #b08d57; border-radius: 0; color: #8a6a3a; text-transform: uppercase; letter-spacing: .24em; font-weight: 500; font-size: .75rem; padding: 0 0 6px; }
+.theme-custom .perk { border: 1px solid var(--line); }
+.theme-custom .perk span { filter: grayscale(1); }
+.theme-custom .product { border: 1px solid var(--line); }
+.theme-custom .product .img-wrap { background: #efe9df; }
+.theme-custom .product:hover img { transform: scale(1.04); }
+.theme-custom .product h3 { font-size: 1.6rem; }
+.theme-custom .product .price { font-family: var(--body); font-weight: 500; font-size: 1.1rem; letter-spacing: .04em; }
+.theme-custom .product input[type=text] { border: 0; border-bottom: 1px solid #111; border-radius: 0; background: transparent; padding: 10px 0; }
+.theme-custom .btn { border-radius: 0; text-transform: uppercase; letter-spacing: .16em; font-size: .78rem; font-weight: 600; padding: 14px 22px; border-width: 1px; }
+.theme-custom .btn-primary { background: #111; border-color: #111; box-shadow: none; }
+.theme-custom .btn-primary:hover { background: #b08d57; border-color: #b08d57; }
+.theme-custom .badge { border-radius: 0; background: #111; color: #c9b28a; }
+.theme-custom .cart-button { border-radius: 0; text-transform: uppercase; letter-spacing: .12em; font-size: .82rem; }
+.theme-custom .cart-count { background: #b08d57; }
+.theme-custom .cart-drawer { border-radius: 0; }
+.theme-custom .icon-btn { border-radius: 0; border: 1px solid var(--line); }
+.theme-custom .cart-line { border: 1px solid var(--line); border-radius: 0; }
+.theme-custom .cart-line img { border-radius: 0; }
+.theme-custom .qty button { border-radius: 0; background: #efe9df; }
+.theme-custom .steps li { border: 1px solid var(--line); }
+.theme-custom .steps li::before { color: #b08d57; font-style: italic; }
+.theme-custom .site-footer { background: #111; }
+.theme-custom .site-footer a { color: #c9b28a; }
+.theme-custom .footer-brand { font-style: italic; }
+.theme-custom .ship-meter .fill { background: linear-gradient(90deg, #111, #b08d57); }
+.theme-custom .modal-card { border-radius: 0; }
+
+@media (max-width: 860px) {
+  .shop-tabs { grid-template-columns: 1fr; }
+  .shop-tab { flex-direction: row; align-items: center; }
+  .shop-tab img { width: 38%; aspect-ratio: 1 / 1; padding: 10px; }
+  .shop-tab > div { padding: 16px 18px 16px 4px; }
+  .shop-tab h3 { font-size: 1.8rem; }
+  .steps { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .shop-hero { padding: 40px 16px 30px; }
+  .theme-custom .shop-hero { padding: 60px 16px 50px; }
+  .theme-dad .shop-hero { padding: 44px 16px 48px; }
+  .theme-custom .nav a { font-size: .75rem; letter-spacing: .1em; }
+}
+
+.product .btn { white-space: nowrap; }
+.theme-dad .product .btn { padding: 10px 14px; font-size: .9rem; }
+.theme-custom .product .btn { padding: 13px 16px; }
+@media (max-width: 640px) {
+  .theme-dad .brand { font-size: 1.12rem; }
+  .theme-dad .brand-mark { font-size: 1.35rem; }
+}

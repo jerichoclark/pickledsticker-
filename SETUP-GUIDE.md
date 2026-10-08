@@ -10,7 +10,9 @@ in order. No coding needed; you'll only be copy-pasting.
 | `config.js` | Shop settings: PayPal ID, shipping price, email | **Yes** |
 | `products.js` | Your list of tumblers, prices and descriptions | **Yes** |
 | `images/` | Tumbler photos (placeholders for now) | **Yes**, drop photos in here |
-| `index.html`, `styles.css`, `app.js` | The website itself | No |
+| `index.html` | The cover page with the Mom / Dad / Custom tabs | No |
+| `mom.html`, `dad.html`, `custom.html` | The three shop pages, each with its own style | No |
+| `styles.css`, `app.js` | The look and the shopping bag / checkout engine | No |
 
 ## Step 1: Fill in your email
 
@@ -57,6 +59,7 @@ That's it, real money now goes to your PayPal.
 3. In `products.js`, change that tumbler's `image:` line to match, e.g. `image: "images/pickle-party.jpg",`.
 
 To add a new tumbler, copy one whole `{ ... },` block in `products.js`, paste it below, and change the words and price.
+The `shop:` line decides which tab it shows up in: `"mom"`, `"dad"`, or `"custom"`.
 To mark one sold out, change `inStock: true` to `inStock: false`.
 
 ## How orders work (important)

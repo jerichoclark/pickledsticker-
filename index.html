@@ -4,31 +4,31 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pickled Sticker | Handmade Sublimation Tumblers</title>
-  <meta name="description" content="Bright, handmade sublimation tumblers from Pickled Sticker. Personalized names, gift-ready, shipped to your door.">
-  <meta property="og:title" content="Pickled Sticker | Handmade Tumblers">
-  <meta property="og:description" content="Cute, bright, handmade tumblers. Personalize yours or grab a gift.">
+  <meta name="description" content="Bright, handmade sublimation tumblers for Mom, Dad, and fully custom designs. Shipped to your door.">
+  <meta property="og:title" content="Pickled Sticker | Handmade Sublimation Tumblers">
+  <meta property="og:description" content="Bright, handmade sublimation tumblers for Mom, Dad, and fully custom designs. Shipped to your door.">
   <meta property="og:image" content="images/pickle-party.svg">
   <link rel="icon" href="images/pickle-party.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=DM+Sans:wght@400;500;700&family=Archivo+Black&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <div class="announce" id="announce">✨ <span id="announceText">Handmade with love</span> ✨</div>
+<body class="theme-mom page-cover">
+  <div class="announce">✨ <span id="announceText">Handmade with love</span> ✨</div>
 
   <header class="site-header">
-    <a href="#top" class="brand" id="top">
+    <a href="index.html" class="brand">
       <span class="brand-mark" aria-hidden="true">🥒</span>
       <span class="brand-name" data-shop-name>Pickled Sticker</span>
     </a>
-    <nav class="nav">
-      <a href="#shop">Shop</a>
-      <a href="#gifts">Gifts</a>
-      <a href="#about">Our story</a>
-      <a href="#policies">Shipping</a>
+    <nav class="nav tabs" aria-label="Shops">
+      <a href="mom.html">Mom</a>
+      <a href="dad.html">Dad</a>
+      <a href="custom.html">Custom</a>
+      <a href="index.html#about">Our story</a>
     </nav>
-    <button class="cart-button" id="cartButton" aria-label="Open cart">
+    <button class="cart-button" id="cartButton" aria-label="Open bag">
       <span aria-hidden="true">🛍️</span> Bag <span class="cart-count" id="cartCount">0</span>
     </button>
   </header>
@@ -40,14 +40,14 @@
         <h1>Your new <span class="pop">favorite tumbler</span> is here.</h1>
         <p class="tagline" id="tagline"></p>
         <div class="hero-ctas">
-          <a href="#shop" class="btn btn-primary">Shop tumblers</a>
-          <a href="#shop" class="btn btn-ghost" id="personalizeCta">Make it personal ✍️</a>
+          <a href="#shops" class="btn btn-primary">Start shopping</a>
+          <a href="custom.html" class="btn btn-ghost">Make it personal ✍️</a>
         </div>
       </div>
       <div class="hero-art" aria-hidden="true">
         <img class="float f1" src="images/floral-dream.svg" alt="">
         <img class="float f2" src="images/pickle-party.svg" alt="">
-        <img class="float f3" src="images/sunset-glow.svg" alt="">
+        <img class="float f3" src="images/grill-master.svg" alt="">
         <span class="sparkle s1">✦</span><span class="sparkle s2">✧</span><span class="sparkle s3">✦</span>
       </div>
     </section>
@@ -59,20 +59,48 @@
       <div class="perk"><span>🔒</span><div><strong>Secure checkout</strong><small>Pay safely with PayPal</small></div></div>
     </section>
 
-    <section id="shop" class="section">
+    <section id="shops" class="section">
       <div class="section-head">
-        <h2>Shop the drop</h2>
-        <p>Fresh designs, pressed by hand in our little home studio.</p>
+        <h2>Who are we shopping for?</h2>
+        <p>Pick a shop to see the tumblers made for them.</p>
       </div>
-      <div class="product-grid" id="productGrid"></div>
+      <div class="shop-tabs">
+        <a class="shop-tab tab-mom reveal" href="mom.html">
+          <img src="images/floral-dream.svg" alt="">
+          <div>
+            <span class="tab-kicker">💐 For her</span>
+            <h3>Mom</h3>
+            <p>Bright, cute and full of personality.</p>
+            <span class="tab-go">Shop Mom →</span>
+          </div>
+        </a>
+        <a class="shop-tab tab-dad reveal" href="dad.html">
+          <img src="images/grill-master.svg" alt="">
+          <div>
+            <span class="tab-kicker">🍔 For him</span>
+            <h3>Dad</h3>
+            <p>Grills, games, lake days and dad jokes.</p>
+            <span class="tab-go">Shop Dad →</span>
+          </div>
+        </a>
+        <a class="shop-tab tab-custom reveal" href="custom.html">
+          <img src="images/custom-monogram.svg" alt="">
+          <div>
+            <span class="tab-kicker">Made to order</span>
+            <h3>Custom</h3>
+            <p>Your names, your photo, your idea.</p>
+            <span class="tab-go">Shop Custom →</span>
+          </div>
+        </a>
+      </div>
     </section>
 
     <section id="gifts" class="section gifts">
       <div class="gift-card">
-        <h2>The gift she'll actually use 🎀</h2>
-        <p>Teacher thank-yous, bridesmaid boxes, Mother's Day, birthdays, besties. Add her name and you're the favorite.</p>
+        <h2>The gift they'll actually use 🎀</h2>
+        <p>Teacher thank-yous, bridesmaid boxes, Mother's Day, Father's Day, birthdays, besties. Add a name and you're the favorite.</p>
         <div class="chips">
-          <span>👩‍🏫 Teachers</span><span>👰 Bridal party</span><span>🌷 Mother's Day</span><span>🎂 Birthdays</span><span>⚽ Team moms</span>
+          <span>👩‍🏫 Teachers</span><span>👰 Bridal party</span><span>🌷 Mother's Day</span><span>👔 Father's Day</span><span>🎂 Birthdays</span><span>⚽ Team parents</span>
         </div>
         <a class="btn btn-primary" id="contactLink" href="#">Ask about custom &amp; bulk orders</a>
       </div>
@@ -102,11 +130,12 @@
 
   <footer class="site-footer">
     <p class="footer-brand">🥒 <span data-shop-name>Pickled Sticker</span></p>
+    <p class="footer-links"><a href="mom.html">Mom</a> · <a href="dad.html">Dad</a> · <a href="custom.html">Custom</a> · <a href="index.html#policies">Shipping &amp; care</a></p>
     <p id="socialLinks"></p>
     <p class="small">&copy; <span id="year"></span> <span data-shop-name>Pickled Sticker</span>. Secure checkout by PayPal.</p>
   </footer>
 
-  <!-- Cart drawer -->
+  <!-- Shopping bag (shared by every page) -->
   <div class="overlay" id="overlay" hidden></div>
   <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping bag" hidden>
     <div class="cart-head">
