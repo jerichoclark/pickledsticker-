@@ -106,6 +106,19 @@ window.PRODUCTS = [
     badge: "New",
   },
 
+  {
+    shop: "mom",
+    id: "good-morning",
+    name: "Good Morning",
+    price: 19.99,
+    size: "20 oz skinny",
+    description: "Cozy sunlit kitchen, coffee in hand, messy bun energy.",
+    image: "images/good-morning.jpg",
+    inStock: true,
+    personalize: false,
+    badge: "New",
+  },
+
   // ---------------------------- DAD ----------------------------
   {
     shop: "dad",
