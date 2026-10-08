@@ -93,6 +93,19 @@ window.PRODUCTS = [
     badge: "Personalize it",
   },
 
+  {
+    shop: "mom",
+    id: "cool-vibes",
+    name: "Cool Vibes",
+    price: 19.99,
+    size: "20 oz skinny",
+    description: "Anime-style girl with headphones watching a city sunset.",
+    image: "images/cool-vibes.jpg",
+    inStock: true,
+    personalize: false,
+    badge: "New",
+  },
+
   // ---------------------------- DAD ----------------------------
   {
     shop: "dad",
