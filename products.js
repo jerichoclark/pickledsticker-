@@ -403,6 +403,19 @@ window.PRODUCTS = [
     badge: "New",
     tags: ["Political"],
   },
+  {
+    shop: "catalog",
+    id: "alley-brawler",
+    name: "Alley Brawler",
+    price: 19.99,
+    size: "20 oz skinny",
+    description: "Anime karate fighter squaring up in a gritty city alley.",
+    image: "images/alley-brawler.jpg",
+    inStock: true,
+    personalize: false,
+    badge: "New",
+    tags: ["Anime"],
+  },
 ];
 
 // The groups shown as buttons on the All page, in this order.
