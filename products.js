@@ -351,6 +351,19 @@ window.PRODUCTS = [
     badge: "New",
     tags: ["Artsy"],
   },
+  {
+    shop: "catalog",
+    id: "red-white-shades",
+    name: "Red, White & Shades",
+    price: 19.99,
+    size: "20 oz skinny",
+    description: "Cartoon president in stars-and-stripes sunglasses with fireworks.",
+    image: "images/red-white-shades.jpg",
+    inStock: true,
+    personalize: false,
+    badge: "New",
+    tags: ["Political"],
+  },
 ];
 
 // The groups shown as buttons on the All page, in this order.
