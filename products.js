@@ -462,7 +462,7 @@ window.PRODUCTS = [
     price: 19.99,
     size: "20 oz skinny",
     description: "Bored pickle kid daydreaming at his school desk.",
-    image: "images/class-pickle.jpg",
+    image: "images/class-pickle.jpg?v=2",
     inStock: true,
     personalize: false,
     badge: "New",
