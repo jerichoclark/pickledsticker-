@@ -184,14 +184,14 @@ window.PRODUCTS = [
   {
     shop: "dad",
     id: "okayest-dad",
-    name: "World's Okayest Dad",
+    name: "Dad Name Tumbler",
     price: 19.99,
     size: "20 oz skinny",
-    description: "The award he's been waiting for. Add his name for the full honor.",
-    image: "images/okayest-dad.svg",
+    description: "Grill, fishing, football and tools around his name in bold script (sample shows Adam).",
+    image: "images/dad-name.jpg",
     inStock: true,
     personalize: true,
-    personalizeHint: "His name (optional), e.g. Big Mike",
+    personalizeHint: "Name to add, e.g. Adam or Dad",
     badge: "Personalize it",
   },
 
