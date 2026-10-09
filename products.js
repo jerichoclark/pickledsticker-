@@ -364,6 +364,19 @@ window.PRODUCTS = [
     badge: "New",
     tags: ["Political"],
   },
+  {
+    shop: "catalog",
+    id: "asleep-at-the-desk",
+    name: "Asleep at the Desk",
+    price: 19.99,
+    size: "20 oz skinny",
+    description: "Cartoon president napping at his desk with eagles, fireworks and flags.",
+    image: "images/asleep-at-the-desk.jpg",
+    inStock: true,
+    personalize: false,
+    badge: "New",
+    tags: ["Controversial"],
+  },
 ];
 
 // The groups shown as buttons on the All page, in this order.
