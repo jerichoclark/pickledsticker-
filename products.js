@@ -416,6 +416,19 @@ window.PRODUCTS = [
     badge: "New",
     tags: ["Anime"],
   },
+  {
+    shop: "catalog",
+    id: "crystal-cave-quest",
+    name: "Crystal Cave Quest",
+    price: 19.99,
+    size: "20 oz skinny",
+    description: "Video game hero adventure through a glowing crystal cave.",
+    image: "images/crystal-cave-quest.jpg",
+    inStock: true,
+    personalize: false,
+    badge: "New",
+    tags: ["Elementary School"],
+  },
 ];
 
 // The groups shown as buttons on the All page, in this order.
