@@ -221,6 +221,19 @@ window.PRODUCTS = [
     badge: "New",
   },
 
+  {
+    shop: "dad",
+    id: "big-but-still-armed",
+    name: "Big but Still Armed",
+    price: 19.99,
+    size: "20 oz skinny",
+    description: "Chunky cartoon dragon guarding his gold, armed and unbothered.",
+    image: "images/big-but-still-armed.jpg",
+    inStock: true,
+    personalize: false,
+    badge: "New",
+  },
+
   // --------------------------- CUSTOM --------------------------
   {
     shop: "custom",
