@@ -294,7 +294,7 @@ window.PRODUCTS = [
     price: 44.99,
     size: "20 oz skinny",
     description: "Tell us your vision and we'll design it from scratch, then send a proof before pressing.",
-    image: "images/custom-design.svg",
+    image: "images/custom-design.jpg",
     inStock: true,
     personalize: true,
     personalizeHint: "Describe your idea (colors, theme, words)",
