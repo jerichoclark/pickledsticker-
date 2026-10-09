@@ -164,7 +164,7 @@ window.PRODUCTS = [
     price: 19.99,
     size: "20 oz skinny",
     description: "Classic woodland camo. You'll lose it in the truck. Worth it.",
-    image: "images/camo-classic.svg",
+    image: "images/camo-classic.jpg",
     inStock: true,
     personalize: false,
     badge: "",
