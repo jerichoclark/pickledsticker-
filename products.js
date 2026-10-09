@@ -268,7 +268,7 @@ window.PRODUCTS = [
     price: 34.99,
     size: "20 oz skinny",
     description: "Any name, quote, or inside joke, styled just for you.",
-    image: "images/custom-name.svg",
+    image: "images/custom-name.jpg",
     inStock: true,
     personalize: true,
     personalizeHint: "The name or phrase you want",
