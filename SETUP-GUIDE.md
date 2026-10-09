@@ -59,7 +59,7 @@ That's it, real money now goes to your PayPal.
 3. In `products.js`, change that tumbler's `image:` line to match, e.g. `image: "images/pickle-party.jpg",`.
 
 To add a new tumbler, copy one whole `{ ... },` block in `products.js`, paste it below, and change the words and price.
-The `shop:` line decides which tab it shows up in: `"mom"`, `"dad"`, or `"custom"`.
+The `shop:` line decides which tab it shows up in: `"mom"`, `"dad"`, or `"custom"`. Use `"all"` to show it on every tab (like the Pickle Party brand cup).
 To mark one sold out, change `inStock: true` to `inStock: false`.
 
 ## How orders work (important)

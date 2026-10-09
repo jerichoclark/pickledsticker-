@@ -90,7 +90,7 @@
     if (!grid) return; // the cover page has no product grid
     const shop = document.body.dataset.shop;
     grid.innerHTML = "";
-    PRODUCTS.filter((p) => !shop || p.shop === shop).forEach((p) => {
+    PRODUCTS.filter((p) => !shop || p.shop === shop || p.shop === "all").forEach((p) => {
       const card = document.createElement("article");
       card.className = "product";
       card.innerHTML = `

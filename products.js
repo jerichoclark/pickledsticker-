@@ -4,7 +4,7 @@
 //  Each product is one { ... } block. To add a new one, copy a whole
 //  block (from { to },) and paste it below the last one, then change it.
 //
-//  shop        which tab it shows up in: "mom", "dad", or "custom"
+//  shop        which tab it shows up in: "mom", "dad", "custom", or "all" (every tab)
 //  id          a short unique name, no spaces (used behind the scenes)
 //  name        what customers see
 //  price       in dollars, no $ sign (e.g. 29.99)
@@ -20,7 +20,7 @@
 window.PRODUCTS = [
   // ---------------------------- MOM ----------------------------
   {
-    shop: "mom",
+    shop: "all",
     id: "pickle-party",
     name: "Pickle Party",
     price: 14.99,
