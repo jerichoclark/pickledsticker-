@@ -122,6 +122,9 @@
       }
       grid.appendChild(card);
     });
+    if (catalog && !grid.children.length) {
+      grid.innerHTML = `<p class="empty-tag">New ${escapeHtml(tag)} designs are coming soon! 🥒</p>`;
+    }
   }
 
   let rendered = false;
@@ -136,8 +139,8 @@
   function renderTagBar(active) {
     const bar = $("tagBar");
     if (!bar) return;
-    // only show groups that have at least one cup, so shoppers never land on an empty list
-    const used = (window.TAGS || []).filter((t) => PRODUCTS.some((p) => (p.tags || []).includes(t)));
+    // every group gets a button; empty ones show 0 until cups are added
+    const used = window.TAGS || [];
     const btn = (t, label, n) =>
       `<button type="button" class="tag-chip${t === active ? " active" : ""}" data-tag="${escapeHtml(t)}" aria-pressed="${t === active}">${escapeHtml(label)} <span>${n}</span></button>`;
     bar.innerHTML = btn("", "All", PRODUCTS.length) +
