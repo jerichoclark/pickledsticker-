@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Story | Pickled Sticker</title>
+  <meta name="description" content="Bright, handmade sublimation tumblers for Mom, Dad, and fully custom designs. Shipped to your door.">
+  <meta property="og:title" content="Pickled Sticker | Handmade Sublimation Tumblers">
+  <meta property="og:description" content="Bright, handmade sublimation tumblers for Mom, Dad, and fully custom designs. Shipped to your door.">
+  <meta property="og:image" content="images/pickle-party.png">
+  <link rel="icon" href="images/pickle-party.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=DM+Sans:wght@400;500;700&family=Archivo+Black&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-mom page-story">
+  <div class="announce">✨ <span id="announceText">Handmade with love</span> ✨</div>
+
+  <header class="site-header">
+    <a href="index.html" class="brand">
+      <span class="brand-mark" aria-hidden="true">🥒</span>
+      <span class="brand-name" data-shop-name>Pickled Sticker</span>
+    </a>
+    <nav class="nav tabs" aria-label="Shops">
+      <a href="mom.html">Mom</a>
+      <a href="dad.html">Dad</a>
+      <a href="custom.html">Custom</a>
+      <a href="story.html">Our story</a>
+    </nav>
+    <button class="cart-button" id="cartButton" aria-label="Open bag">
+      <span aria-hidden="true">🛍️</span> Bag <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="story-hero">
+      <p class="eyebrow">Our story</p>
+      <h1>Every cup gives <span class="pop">$1 back</span> to kids.</h1>
+      <p class="tagline">Pickled Sticker tumblers are handmade one at a time, and each one helps kids in our own community.</p>
+    </section>
+
+    <section class="section story-give">
+      <div class="give-card">
+        <div class="give-dollar" aria-hidden="true">$1</div>
+        <div>
+          <h2>Our main goal 💛</h2>
+          <p>For <strong>every item sold</strong>, $1 goes straight back to kids. It's split between two causes close to our hearts:</p>
+        </div>
+      </div>
+      <div class="policy-grid give-grid">
+        <div class="policy">
+          <h3>🧒 Local kids in need</h3>
+          <p>Part of every dollar helps children in our area who are going without. Think school supplies, warm clothes, and the everyday basics every kid deserves.</p>
+        </div>
+        <div class="policy">
+          <h3>📚 Homeschool families</h3>
+          <p>The rest goes to local homeschool families for extracurricular supplies and field trips: art kits, science gear, museum visits and days out that make learning fun.</p>
+        </div>
+        <div class="policy">
+          <h3>🔁 It adds up</h3>
+          <p>One tumbler is $1. A bridal party of eight is $8. A whole team order is even more. Every cup you buy makes a real difference.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>How your tumbler is made 🎨</h2>
+        <p>From your click to your doorstep, here's what happens.</p>
+      </div>
+      <ol class="story-steps">
+        <li><strong>You pick your cup.</strong> Shop the Mom, Dad or Custom pages and add a name or phrase if you'd like it personalized.</li>
+        <li><strong>You check out safely.</strong> Payment goes through PayPal, so your card details never touch our site.</li>
+        <li><strong>We make it by hand.</strong> Your design is printed and heat-pressed with sublimation, which bakes the ink right into the coating so it won't peel, crack or fade.</li>
+        <li><strong>We check and pack it.</strong> Every tumbler is inspected and packed with care, ready to gift.</li>
+        <li><strong>It ships to you.</strong> Most orders ship within 3 to 5 business days. <span id="shippingPolicy"></span></li>
+        <li><strong>$1 goes to kids.</strong> Your order adds a dollar to our giving for local children and homeschool families.</li>
+      </ol>
+    </section>
+
+    <section class="section about">
+      <div class="section-head">
+        <h2>Who we are 👋</h2>
+      </div>
+      <p>
+        We're a husband and wife team who fell in love with making tumblers. Every cup is pressed,
+        checked and packed by us, in small batches, so you get something made with real care.
+        Pickled Sticker started as a fun side project and grew into a way to give back to the kids around us.
+      </p>
+      <div class="story-cta">
+        <a href="mom.html" class="btn btn-primary">Shop Mom</a>
+        <a href="dad.html" class="btn btn-ghost">Shop Dad</a>
+        <a href="custom.html" class="btn btn-ghost">Shop Custom</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-brand">🥒 <span data-shop-name>Pickled Sticker</span></p>
+    <p class="footer-links"><a href="mom.html">Mom</a> · <a href="dad.html">Dad</a> · <a href="custom.html">Custom</a> · <a href="story.html">Our story</a> · <a href="index.html#policies">Shipping &amp; care</a></p>
+    <p id="socialLinks"></p>
+    <p class="small">&copy; <span id="year"></span> <span data-shop-name>Pickled Sticker</span>. Secure checkout by PayPal.</p>
+  </footer>
+
+  <!-- Shopping bag (shared by every page) -->
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping bag" hidden>
+    <div class="cart-head">
+      <h2>Your bag</h2>
+      <button class="icon-btn" id="closeCart" aria-label="Close bag">✕</button>
+    </div>
+    <div class="ship-meter" id="shipMeter"></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-totals" id="cartTotals"></div>
+    <div id="checkoutNotice" class="notice" hidden></div>
+    <div id="paypal-button-container"></div>
+  </aside>
+
+  <!-- Thank-you popup -->
+  <div class="modal" id="thanksModal" hidden>
+    <div class="modal-card">
+      <div class="confetti" aria-hidden="true">🎉</div>
+      <h2>Yay, it's yours!</h2>
+      <p>Your order went through. You'll get a receipt from PayPal by email.</p>
+      <p class="small">Order ID: <strong id="orderId"></strong></p>
+      <button class="btn btn-primary" id="closeThanks">Keep shopping</button>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
