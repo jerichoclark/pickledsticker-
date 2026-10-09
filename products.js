@@ -281,7 +281,7 @@ window.PRODUCTS = [
     price: 39.99,
     size: "20 oz skinny",
     description: "Your favorite photo wrapped around the tumbler. Email us the photo after you order.",
-    image: "images/custom-photo.svg",
+    image: "images/custom-photo.jpg",
     inStock: true,
     personalize: true,
     personalizeHint: "Any notes about your photo (optional)",
