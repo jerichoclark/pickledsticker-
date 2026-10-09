@@ -4,7 +4,8 @@
 //  Each product is one { ... } block. To add a new one, copy a whole
 //  block (from { to },) and paste it below the last one, then change it.
 //
-//  shop        which tab it shows up in: "mom", "dad", "custom", or "all" (every tab)
+//  shop        which tab it shows up in: "mom", "dad", "custom", or "all" (every tab).
+//              Use "catalog" for a cup that only shows on the All page.
 //  id          a short unique name, no spaces (used behind the scenes)
 //  name        what customers see
 //  price       in dollars, no $ sign (e.g. 29.99)
@@ -323,6 +324,19 @@ window.PRODUCTS = [
     personalizeHint: "Describe your idea (colors, theme, words)",
     badge: "",
     tags: [],
+  },
+  {
+    shop: "catalog",
+    id: "pool-day-pickle",
+    name: "Pool Day Pickle",
+    price: 19.99,
+    size: "20 oz skinny",
+    description: "A very unimpressed pickle guy chilling in the pool.",
+    image: "images/pool-day-pickle.jpg",
+    inStock: true,
+    personalize: false,
+    badge: "New",
+    tags: ["Originals"],
   },
 ];
 
