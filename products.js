@@ -377,6 +377,19 @@ window.PRODUCTS = [
     badge: "New",
     tags: ["Controversial"],
   },
+  {
+    shop: "catalog",
+    id: "pearls-and-fireworks",
+    name: "Pearls & Fireworks",
+    price: 19.99,
+    size: "20 oz skinny",
+    description: "Cartoon vice president in pearls with fireworks and flags.",
+    image: "images/pearls-and-fireworks.jpg",
+    inStock: true,
+    personalize: false,
+    badge: "New",
+    tags: ["Political"],
+  },
 ];
 
 // The groups shown as buttons on the All page, in this order.
