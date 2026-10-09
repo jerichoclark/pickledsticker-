@@ -195,6 +195,19 @@ window.PRODUCTS = [
     badge: "Personalize it",
   },
 
+  {
+    shop: "dad",
+    id: "dad-and-son",
+    name: "Dad and Son",
+    price: 19.99,
+    size: "20 oz skinny",
+    description: "Dad and son on the tailgate watching a desert sunset over the city.",
+    image: "images/dad-and-son.jpg",
+    inStock: true,
+    personalize: false,
+    badge: "New",
+  },
+
   // --------------------------- CUSTOM --------------------------
   {
     shop: "custom",
