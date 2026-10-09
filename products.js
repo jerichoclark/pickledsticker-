@@ -429,6 +429,19 @@ window.PRODUCTS = [
     badge: "New",
     tags: ["Elementary School"],
   },
+  {
+    shop: "catalog",
+    id: "rainbow-monster",
+    name: "Rainbow Monster",
+    price: 19.99,
+    size: "20 oz skinny",
+    description: "Fluffy rainbow monster in a candy-colored mushroom land.",
+    image: "images/rainbow-monster.jpg",
+    inStock: true,
+    personalize: false,
+    badge: "New",
+    tags: ["Elementary School"],
+  },
 ];
 
 // The groups shown as buttons on the All page, in this order.
