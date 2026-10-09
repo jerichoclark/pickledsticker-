@@ -234,6 +234,19 @@ window.PRODUCTS = [
     badge: "New",
   },
 
+  {
+    shop: "dad",
+    id: "pro-gun-pro-family",
+    name: "Pro Gun, Pro Family",
+    price: 19.99,
+    size: "20 oz skinny",
+    description: "Distressed American flag with a family badge reading Pro Gun, Pro Family.",
+    image: "images/pro-gun-pro-family.jpg",
+    inStock: true,
+    personalize: false,
+    badge: "New",
+  },
+
   // --------------------------- CUSTOM --------------------------
   {
     shop: "custom",
