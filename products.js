@@ -390,6 +390,19 @@ window.PRODUCTS = [
     badge: "New",
     tags: ["Political"],
   },
+  {
+    shop: "catalog",
+    id: "prime-time-patriot",
+    name: "Prime Time Patriot",
+    price: 19.99,
+    size: "20 oz skinny",
+    description: "Cartoon news host at an America First desk with stars and stripes.",
+    image: "images/prime-time-patriot.jpg",
+    inStock: true,
+    personalize: false,
+    badge: "New",
+    tags: ["Political"],
+  },
 ];
 
 // The groups shown as buttons on the All page, in this order.
