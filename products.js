@@ -455,6 +455,19 @@ window.PRODUCTS = [
     badge: "New",
     tags: ["Elementary School"],
   },
+  {
+    shop: "catalog",
+    id: "class-pickle",
+    name: "Class Pickle",
+    price: 19.99,
+    size: "20 oz skinny",
+    description: "Bored pickle kid daydreaming at his school desk.",
+    image: "images/class-pickle.jpg",
+    inStock: true,
+    personalize: false,
+    badge: "New",
+    tags: ["Originals"],
+  },
 ];
 
 // The groups shown as buttons on the All page, in this order.
