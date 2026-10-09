@@ -255,7 +255,7 @@ window.PRODUCTS = [
     price: 34.99,
     size: "20 oz skinny",
     description: "Clean, classic initials in an elegant layout.",
-    image: "images/custom-monogram.svg",
+    image: "images/custom-monogram.jpg",
     inStock: true,
     personalize: true,
     personalizeHint: "Your initials, e.g. J C M",
