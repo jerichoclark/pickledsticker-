@@ -208,6 +208,19 @@ window.PRODUCTS = [
     badge: "New",
   },
 
+  {
+    shop: "dad",
+    id: "dad-and-daughter",
+    name: "Dad and Daughter",
+    price: 19.99,
+    size: "20 oz skinny",
+    description: "Dad reading a storybook with his little girl in a cozy lamp-lit room.",
+    image: "images/dad-and-daughter.jpg",
+    inStock: true,
+    personalize: false,
+    badge: "New",
+  },
+
   // --------------------------- CUSTOM --------------------------
   {
     shop: "custom",
