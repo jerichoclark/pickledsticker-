@@ -468,6 +468,19 @@ window.PRODUCTS = [
     badge: "New",
     tags: ["Originals"],
   },
+  {
+    shop: "catalog",
+    id: "hillside-overwatch",
+    name: "Hillside Overwatch",
+    price: 19.99,
+    size: "20 oz skinny",
+    description: "Ghillie-suited sniper on watch over a wide green valley.",
+    image: "images/hillside-overwatch.jpg",
+    inStock: true,
+    personalize: false,
+    badge: "New",
+    tags: ["Boy"],
+  },
 ];
 
 // The groups shown as buttons on the All page, in this order.
