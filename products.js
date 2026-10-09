@@ -32,7 +32,7 @@ window.PRODUCTS = [
     inStock: true,
     personalize: false,
     badge: "Our brand cup",
-    tags: ["Originals", "Artsy"],
+    tags: ["Girl"],
   },
   {
     shop: "mom",
@@ -45,7 +45,7 @@ window.PRODUCTS = [
     inStock: true,
     personalize: false,
     badge: "New",
-    tags: ["Artsy", "Girl"],
+    tags: ["Girl"],
   },
   {
     shop: "mom",
@@ -58,7 +58,7 @@ window.PRODUCTS = [
     inStock: true,
     personalize: false,
     badge: "",
-    tags: ["Artsy"],
+    tags: ["Girl"],
   },
   {
     shop: "mom",
@@ -71,7 +71,7 @@ window.PRODUCTS = [
     inStock: true,
     personalize: false,
     badge: "New",
-    tags: ["Artsy"],
+    tags: ["Girl"],
   },
   {
     shop: "mom",
@@ -84,7 +84,7 @@ window.PRODUCTS = [
     inStock: true,
     personalize: false,
     badge: "",
-    tags: ["Artsy", "Girl"],
+    tags: ["Girl"],
   },
   {
     shop: "mom",
@@ -98,7 +98,7 @@ window.PRODUCTS = [
     personalize: true,
     personalizeHint: "Name to add, e.g. Betty or Mama",
     badge: "Personalize it",
-    tags: ["Custom", "Girl"],
+    tags: ["Girl"],
   },
 
   {
@@ -112,7 +112,7 @@ window.PRODUCTS = [
     inStock: true,
     personalize: false,
     badge: "New",
-    tags: ["Anime", "Originals", "Girl"],
+    tags: ["Girl"],
   },
 
   {
@@ -126,7 +126,7 @@ window.PRODUCTS = [
     inStock: true,
     personalize: false,
     badge: "New",
-    tags: ["Anime", "Originals", "Girl"],
+    tags: ["Girl"],
   },
 
   {
@@ -140,7 +140,7 @@ window.PRODUCTS = [
     inStock: true,
     personalize: false,
     badge: "New",
-    tags: ["Anime", "Originals", "Girl"],
+    tags: ["Girl"],
   },
 
   // ---------------------------- DAD ----------------------------
@@ -155,7 +155,7 @@ window.PRODUCTS = [
     inStock: true,
     personalize: false,
     badge: "Dad fave",
-    tags: ["Originals", "Boy"],
+    tags: ["Boy"],
   },
   {
     shop: "dad",
@@ -168,7 +168,7 @@ window.PRODUCTS = [
     inStock: true,
     personalize: false,
     badge: "",
-    tags: ["Artsy", "Boy"],
+    tags: ["Boy"],
   },
   {
     shop: "dad",
@@ -194,7 +194,7 @@ window.PRODUCTS = [
     inStock: true,
     personalize: false,
     badge: "New",
-    tags: ["Originals", "Boy"],
+    tags: ["Boy"],
   },
   {
     shop: "dad",
@@ -208,7 +208,7 @@ window.PRODUCTS = [
     personalize: true,
     personalizeHint: "Name to add, e.g. Adam or Dad",
     badge: "Personalize it",
-    tags: ["Custom", "Boy"],
+    tags: ["Boy"],
   },
 
   {
@@ -222,7 +222,7 @@ window.PRODUCTS = [
     inStock: true,
     personalize: false,
     badge: "New",
-    tags: ["Anime", "Originals", "Boy"],
+    tags: ["Boy"],
   },
 
   {
@@ -236,7 +236,7 @@ window.PRODUCTS = [
     inStock: true,
     personalize: false,
     badge: "New",
-    tags: ["Anime", "Originals", "Girl"],
+    tags: ["Boy"],
   },
 
   {
@@ -250,7 +250,7 @@ window.PRODUCTS = [
     inStock: true,
     personalize: false,
     badge: "New",
-    tags: ["Originals", "Controversial"],
+    tags: ["Boy"],
   },
 
   {
@@ -264,7 +264,7 @@ window.PRODUCTS = [
     inStock: true,
     personalize: false,
     badge: "New",
-    tags: ["Political", "Controversial"],
+    tags: ["Boy"],
   },
 
   // --------------------------- CUSTOM --------------------------
@@ -280,7 +280,7 @@ window.PRODUCTS = [
     personalize: true,
     personalizeHint: "Your initials, e.g. J C M",
     badge: "",
-    tags: ["Custom"],
+    tags: [],
   },
   {
     shop: "custom",
@@ -294,7 +294,7 @@ window.PRODUCTS = [
     personalize: true,
     personalizeHint: "The name or phrase you want",
     badge: "",
-    tags: ["Custom"],
+    tags: [],
   },
   {
     shop: "custom",
@@ -308,7 +308,7 @@ window.PRODUCTS = [
     personalize: true,
     personalizeHint: "Any notes about your photo (optional)",
     badge: "",
-    tags: ["Custom"],
+    tags: [],
   },
   {
     shop: "custom",
@@ -322,7 +322,7 @@ window.PRODUCTS = [
     personalize: true,
     personalizeHint: "Describe your idea (colors, theme, words)",
     badge: "",
-    tags: ["Custom", "Artsy"],
+    tags: [],
   },
 ];
 
