@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Shop Custom | Pickled Sticker</title>
-  <meta name="description" content="Custom sublimation tumblers made to order: monograms, names, photos, and one-of-a-kind designs.">
-  <meta property="og:title" content="Shop Custom | Pickled Sticker">
-  <meta property="og:description" content="Custom sublimation tumblers made to order: monograms, names, photos, and one-of-a-kind designs.">
-  <meta property="og:image" content="images/custom-monogram.jpg">
+  <title>Shop All | Pickled Sticker</title>
+  <meta name="description" content="Every Pickled Sticker tumbler in one place. Browse by anime, artsy, originals, custom and more.">
+  <meta property="og:title" content="Shop All | Pickled Sticker">
+  <meta property="og:description" content="Every Pickled Sticker tumbler in one place. Browse by anime, artsy, originals, custom and more.">
+  <meta property="og:image" content="images/pickle-party.png">
   <link rel="icon" href="images/pickle-party.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=DM+Sans:wght@400;500;700&family=Archivo+Black&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="theme-custom page-shop" data-shop="custom">
+<body class="theme-mom page-shop" data-shop="catalog">
   <div class="announce">✨ <span id="announceText">Handmade with love</span> ✨</div>
 
   <header class="site-header">
@@ -25,8 +25,8 @@
     <nav class="nav tabs" aria-label="Shops">
       <a href="mom.html">Mom</a>
       <a href="dad.html">Dad</a>
-      <a href="custom.html" class="active" aria-current="page">Custom</a>
-      <a href="all.html">All</a>
+      <a href="custom.html">Custom</a>
+      <a href="all.html" class="active" aria-current="page">All</a>
       <a href="story.html">Our story</a>
     </nav>
     <button class="cart-button" id="cartButton" aria-label="Open bag">
@@ -36,9 +36,9 @@
 
   <main>
     <section class="shop-hero">
-      <p class="eyebrow">Made to order</p>
-      <h1>Designed by you. <em class="pop">Made by us.</em></h1>
-      <p class="tagline">Monograms, names, photos, or something completely your own. Every piece is pressed one at a time.</p>
+      <p class="eyebrow">🥒 The Whole Collection</p>
+      <h1>Every tumbler, <span class="pop">all in one place.</span></h1>
+      <p class="tagline">Pick a group below to narrow it down, or scroll through them all.</p>
     </section>
 
     <section class="perks" aria-label="Why shop with us">
@@ -50,19 +50,10 @@
 
     <section id="shop" class="section">
       <div class="section-head">
-        <h2>The custom collection</h2>
+        <h2 id="catalogTitle">Every tumbler</h2>
       </div>
+      <div class="tag-bar" id="tagBar" role="group" aria-label="Filter by group"></div>
       <div class="product-grid" id="productGrid"></div>
-    </section>
-
-    <section class="section how-custom">
-      <div class="section-head"><h2>How custom works</h2></div>
-      <ol class="steps">
-        <li><strong>Choose a style</strong><span>Pick monogram, name, photo, or a design from scratch.</span></li>
-        <li><strong>Tell us the details</strong><span>Type your text in the box before adding to your bag.</span></li>
-        <li><strong>We press it by hand</strong><span>For full designs, we email you a proof before we make it.</span></li>
-      </ol>
-      <p class="center"><a class="btn btn-ghost" id="contactLink" href="#">Questions? Email us</a></p>
     </section>
 
     <section class="section other-shops">
@@ -70,7 +61,7 @@
       <div class="mini-tabs">
         <a class="mini-tab mini-mom" href="mom.html"><span>💐</span> Shop Mom</a>
         <a class="mini-tab mini-dad" href="dad.html"><span>🍔</span> Shop Dad</a>
-        <a class="mini-tab mini-all" href="all.html"><span>🥒</span> Shop All</a>
+        <a class="mini-tab mini-custom" href="custom.html"><span>✦</span> Shop Custom</a>
       </div>
     </section>
   </main>

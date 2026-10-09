@@ -340,6 +340,7 @@ h1, h2, h3 { font-family: var(--display); line-height: 1.15; }
 .mini-tab:hover { transform: translateY(-2px); }
 .mini-mom { background: var(--blush); color: #e0336f; font-family: "Fredoka", sans-serif; }
 .mini-dad { background: #1e2a3a; color: #f2b134; font-family: "Archivo Black", Impact, sans-serif; text-transform: uppercase; }
+.mini-all { background: var(--mint-soft); color: #1d7a57; font-family: "Fredoka", sans-serif; }
 .mini-custom { background: #111; color: #e9e2d6; letter-spacing: .12em; text-transform: uppercase; font-size: .9rem; }
 
 /* Custom: how it works */
@@ -482,3 +483,19 @@ h1, h2, h3 { font-family: var(--display); line-height: 1.15; }
 }
 .product-body { gap: 6px; }
 .product .buy-row { margin-top: auto; padding-top: 8px; }
+
+/* ---------- All page: tag filter ---------- */
+.tag-bar { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: -6px auto 30px; max-width: 900px; }
+.tag-chip {
+  font: 700 .95rem var(--body); color: var(--ink); background: var(--card);
+  border: 2px solid var(--line); border-radius: 999px; padding: 8px 16px; cursor: pointer;
+  transition: background .2s, border-color .2s, color .2s, transform .2s;
+}
+.tag-chip span { color: var(--muted); font-weight: 500; margin-left: 2px; }
+.tag-chip:hover { border-color: var(--pink); transform: translateY(-1px); }
+.tag-chip.active { background: var(--pink); border-color: var(--pink); color: #fff; }
+.tag-chip.active span { color: rgba(255,255,255,.85); }
+@media (max-width: 600px) {
+  .tag-bar { gap: 8px; }
+  .tag-chip { font-size: .88rem; padding: 7px 13px; }
+}

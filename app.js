@@ -89,8 +89,11 @@
     const grid = $("productGrid");
     if (!grid) return; // the cover page has no product grid
     const shop = document.body.dataset.shop;
+    const catalog = shop === "catalog"; // the All page shows every cup, filtered by tag
+    const tag = catalog ? currentTag() : "";
+    if (catalog) renderTagBar(tag);
     grid.innerHTML = "";
-    PRODUCTS.filter((p) => !shop || p.shop === shop || p.shop === "all").forEach((p) => {
+    PRODUCTS.filter((p) => catalog ? (!tag || (p.tags || []).includes(tag)) : (!shop || p.shop === shop || p.shop === "all")).forEach((p) => {
       const card = document.createElement("article");
       card.className = "product";
       card.innerHTML = `
@@ -108,6 +111,7 @@
           </div>
         </div>`;
       card.classList.add("reveal");
+      if (rendered) card.classList.add("shown"); // re-renders (tag clicks) skip the scroll-in animation
       const btn = card.querySelector("button");
       if (btn) {
         btn.addEventListener("click", () => {
@@ -118,6 +122,28 @@
       }
       grid.appendChild(card);
     });
+  }
+
+  let rendered = false;
+
+  // ---------- All page tags ----------
+  function currentTag() {
+    const m = location.hash.match(/^#tag=(.+)$/);
+    const t = m ? decodeURIComponent(m[1]) : "";
+    return (window.TAGS || []).includes(t) ? t : "";
+  }
+
+  function renderTagBar(active) {
+    const bar = $("tagBar");
+    if (!bar) return;
+    // only show groups that have at least one cup, so shoppers never land on an empty list
+    const used = (window.TAGS || []).filter((t) => PRODUCTS.some((p) => (p.tags || []).includes(t)));
+    const btn = (t, label, n) =>
+      `<button type="button" class="tag-chip${t === active ? " active" : ""}" data-tag="${escapeHtml(t)}" aria-pressed="${t === active}">${escapeHtml(label)} <span>${n}</span></button>`;
+    bar.innerHTML = btn("", "All", PRODUCTS.length) +
+      used.map((t) => btn(t, t, PRODUCTS.filter((p) => (p.tags || []).includes(t)).length)).join("");
+    const title = $("catalogTitle");
+    if (title) title.textContent = active ? active : "Every tumbler";
   }
 
   // ---------- cart drawer ----------
@@ -277,6 +303,18 @@
   // ---------- start ----------
   fillShopText();
   renderProducts();
+  rendered = true;
+  const tagBar = $("tagBar");
+  if (tagBar) {
+    tagBar.addEventListener("click", (e) => {
+      const b = e.target.closest(".tag-chip");
+      if (!b) return;
+      const t = b.dataset.tag;
+      history.replaceState(null, "", t ? "#tag=" + encodeURIComponent(t) : location.pathname);
+      renderProducts();
+    });
+    window.addEventListener("hashchange", renderProducts);
+  }
   renderCart();
   setupReveal();
   $("cartButton").onclick = openCart;

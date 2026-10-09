@@ -15,6 +15,8 @@
 //  personalize true = shows a box where the buyer can type a name/text
 //  personalizeHint  the grey hint text inside that box (optional)
 //  badge       a little sticker on the photo, like "New" or "Our fave" (use "" for none)
+//  tags        which groups it shows under on the All page, e.g. ["Anime", "Girl"]
+//              (pick from the TAGS list at the bottom of this file)
 // =====================================================================
 
 window.PRODUCTS = [
@@ -30,6 +32,7 @@ window.PRODUCTS = [
     inStock: true,
     personalize: false,
     badge: "Our brand cup",
+    tags: ["Originals", "Artsy"],
   },
   {
     shop: "mom",
@@ -42,6 +45,7 @@ window.PRODUCTS = [
     inStock: true,
     personalize: false,
     badge: "New",
+    tags: ["Artsy", "Girl"],
   },
   {
     shop: "mom",
@@ -54,6 +58,7 @@ window.PRODUCTS = [
     inStock: true,
     personalize: false,
     badge: "",
+    tags: ["Artsy"],
   },
   {
     shop: "mom",
@@ -66,6 +71,7 @@ window.PRODUCTS = [
     inStock: true,
     personalize: false,
     badge: "New",
+    tags: ["Artsy"],
   },
   {
     shop: "mom",
@@ -78,6 +84,7 @@ window.PRODUCTS = [
     inStock: true,
     personalize: false,
     badge: "",
+    tags: ["Artsy", "Girl"],
   },
   {
     shop: "mom",
@@ -91,6 +98,7 @@ window.PRODUCTS = [
     personalize: true,
     personalizeHint: "Name to add, e.g. Betty or Mama",
     badge: "Personalize it",
+    tags: ["Custom", "Girl"],
   },
 
   {
@@ -104,6 +112,7 @@ window.PRODUCTS = [
     inStock: true,
     personalize: false,
     badge: "New",
+    tags: ["Anime", "Originals", "Girl"],
   },
 
   {
@@ -117,6 +126,7 @@ window.PRODUCTS = [
     inStock: true,
     personalize: false,
     badge: "New",
+    tags: ["Anime", "Originals", "Girl"],
   },
 
   {
@@ -130,6 +140,7 @@ window.PRODUCTS = [
     inStock: true,
     personalize: false,
     badge: "New",
+    tags: ["Anime", "Originals", "Girl"],
   },
 
   // ---------------------------- DAD ----------------------------
@@ -144,6 +155,7 @@ window.PRODUCTS = [
     inStock: true,
     personalize: false,
     badge: "Dad fave",
+    tags: ["Originals", "Boy"],
   },
   {
     shop: "dad",
@@ -156,6 +168,7 @@ window.PRODUCTS = [
     inStock: true,
     personalize: false,
     badge: "",
+    tags: ["Artsy", "Boy"],
   },
   {
     shop: "dad",
@@ -168,6 +181,7 @@ window.PRODUCTS = [
     inStock: true,
     personalize: false,
     badge: "",
+    tags: ["Boy"],
   },
   {
     shop: "dad",
@@ -180,6 +194,7 @@ window.PRODUCTS = [
     inStock: true,
     personalize: false,
     badge: "New",
+    tags: ["Originals", "Boy"],
   },
   {
     shop: "dad",
@@ -193,6 +208,7 @@ window.PRODUCTS = [
     personalize: true,
     personalizeHint: "Name to add, e.g. Adam or Dad",
     badge: "Personalize it",
+    tags: ["Custom", "Boy"],
   },
 
   {
@@ -206,6 +222,7 @@ window.PRODUCTS = [
     inStock: true,
     personalize: false,
     badge: "New",
+    tags: ["Anime", "Originals", "Boy"],
   },
 
   {
@@ -219,6 +236,7 @@ window.PRODUCTS = [
     inStock: true,
     personalize: false,
     badge: "New",
+    tags: ["Anime", "Originals", "Girl"],
   },
 
   {
@@ -232,6 +250,7 @@ window.PRODUCTS = [
     inStock: true,
     personalize: false,
     badge: "New",
+    tags: ["Originals", "Controversial"],
   },
 
   {
@@ -245,6 +264,7 @@ window.PRODUCTS = [
     inStock: true,
     personalize: false,
     badge: "New",
+    tags: ["Political", "Controversial"],
   },
 
   // --------------------------- CUSTOM --------------------------
@@ -260,6 +280,7 @@ window.PRODUCTS = [
     personalize: true,
     personalizeHint: "Your initials, e.g. J C M",
     badge: "",
+    tags: ["Custom"],
   },
   {
     shop: "custom",
@@ -273,6 +294,7 @@ window.PRODUCTS = [
     personalize: true,
     personalizeHint: "The name or phrase you want",
     badge: "",
+    tags: ["Custom"],
   },
   {
     shop: "custom",
@@ -286,6 +308,7 @@ window.PRODUCTS = [
     personalize: true,
     personalizeHint: "Any notes about your photo (optional)",
     badge: "",
+    tags: ["Custom"],
   },
   {
     shop: "custom",
@@ -299,5 +322,14 @@ window.PRODUCTS = [
     personalize: true,
     personalizeHint: "Describe your idea (colors, theme, words)",
     badge: "",
+    tags: ["Custom", "Artsy"],
   },
+];
+
+// The groups shown as buttons on the All page, in this order.
+// Add a new name here to make a new group, then put it in a cup's tags.
+window.TAGS = [
+  "Anime", "Artsy", "Baseball Teams", "Boy", "Canvas", "Controversial", "Custom",
+  "Elementary School", "Football Teams", "Girl", "High School", "Middle School",
+  "Originals", "Political",
 ];
