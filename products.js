@@ -442,6 +442,19 @@ window.PRODUCTS = [
     badge: "New",
     tags: ["Elementary School"],
   },
+  {
+    shop: "catalog",
+    id: "monster-dash",
+    name: "Monster Dash",
+    price: 19.99,
+    size: "20 oz skinny",
+    description: "Little monster in a backwards cap racing to the treehouse.",
+    image: "images/monster-dash.jpg",
+    inStock: true,
+    personalize: false,
+    badge: "New",
+    tags: ["Elementary School"],
+  },
 ];
 
 // The groups shown as buttons on the All page, in this order.
