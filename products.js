@@ -176,7 +176,7 @@ window.PRODUCTS = [
     price: 19.99,
     size: "20 oz skinny",
     description: "Built for tailgates, Sunday games, and loud opinions.",
-    image: "images/game-day.svg",
+    image: "images/game-day.jpg",
     inStock: true,
     personalize: false,
     badge: "New",
