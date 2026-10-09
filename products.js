@@ -390,6 +390,19 @@ window.PRODUCTS = [
     badge: "New",
     tags: ["Political"],
   },
+  {
+    shop: "catalog",
+    id: "frog-in-chief",
+    name: "Frog in Chief",
+    price: 19.99,
+    size: "20 oz skinny",
+    description: "Cartoon frog in a suit at an America First news desk.",
+    image: "images/frog-in-chief.jpg",
+    inStock: true,
+    personalize: false,
+    badge: "New",
+    tags: ["Controversial"],
+  },
 ];
 
 // The groups shown as buttons on the All page, in this order.
