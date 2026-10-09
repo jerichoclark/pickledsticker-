@@ -338,6 +338,19 @@ window.PRODUCTS = [
     badge: "New",
     tags: ["Originals"],
   },
+  {
+    shop: "catalog",
+    id: "volcano-glow",
+    name: "Volcano Glow",
+    price: 19.99,
+    size: "20 oz skinny",
+    description: "Bright purple volcano erupting with glowing orange lava.",
+    image: "images/volcano-glow.jpg",
+    inStock: true,
+    personalize: false,
+    badge: "New",
+    tags: ["Artsy"],
+  },
 ];
 
 // The groups shown as buttons on the All page, in this order.
