@@ -481,6 +481,19 @@ window.PRODUCTS = [
     badge: "New",
     tags: ["Boy"],
   },
+  {
+    shop: "catalog",
+    id: "sunset-salute",
+    name: "Sunset Salute",
+    price: 19.99,
+    size: "20 oz skinny",
+    description: "Soldier saluting the American flag under a glowing sunset sky.",
+    image: "images/sunset-salute.jpg",
+    inStock: true,
+    personalize: false,
+    badge: "New",
+    tags: ["Boy"],
+  },
 ];
 
 // The groups shown as buttons on the All page, in this order.
