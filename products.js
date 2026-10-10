@@ -494,6 +494,19 @@ window.PRODUCTS = [
     badge: "New",
     tags: ["Boy"],
   },
+  {
+    shop: "catalog",
+    id: "beach-day-pickle",
+    name: "Beach Day Pickle",
+    price: 19.99,
+    size: "20 oz skinny",
+    description: "Pickle dude kicking back with lemonade under a beach umbrella.",
+    image: "images/beach-day-pickle.jpg",
+    inStock: true,
+    personalize: false,
+    badge: "New",
+    tags: ["Originals"],
+  },
 ];
 
 // The groups shown as buttons on the All page, in this order.
