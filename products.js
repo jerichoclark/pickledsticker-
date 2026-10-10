@@ -572,6 +572,19 @@ window.PRODUCTS = [
     badge: "New",
     tags: ["Artsy"],
   },
+  {
+    shop: "catalog",
+    id: "circuit-zombie",
+    name: "Circuit Zombie",
+    price: 19.99,
+    size: "20 oz skinny",
+    description: "Red-eyed cyborg zombie tangled in wires among robot flies and ruins.",
+    image: "images/circuit-zombie.jpg",
+    inStock: true,
+    personalize: false,
+    badge: "New",
+    tags: ["Artsy"],
+  },
 ];
 
 // The groups shown as buttons on the All page, in this order.
