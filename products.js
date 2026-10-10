@@ -520,6 +520,19 @@ window.PRODUCTS = [
     badge: "New",
     tags: ["Boy"],
   },
+  {
+    shop: "catalog",
+    id: "birthday-pickle",
+    name: "Birthday Pickle",
+    price: 19.99,
+    size: "20 oz skinny",
+    description: "Party-hat pickle with a red cup, cake, and a disco ball.",
+    image: "images/birthday-pickle.jpg",
+    inStock: true,
+    personalize: false,
+    badge: "New",
+    tags: ["Originals"],
+  },
 ];
 
 // The groups shown as buttons on the All page, in this order.
