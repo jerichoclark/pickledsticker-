@@ -585,6 +585,19 @@ window.PRODUCTS = [
     badge: "New",
     tags: ["Artsy"],
   },
+  {
+    shop: "catalog",
+    id: "bbq-pickle",
+    name: "BBQ Pickle",
+    price: 19.99,
+    size: "20 oz skinny",
+    description: "Pickle dude flipping burgers at a sunny backyard cookout.",
+    image: "images/bbq-pickle.jpg",
+    inStock: true,
+    personalize: false,
+    badge: "New",
+    tags: ["Originals"],
+  },
 ];
 
 // The groups shown as buttons on the All page, in this order.
