@@ -559,6 +559,19 @@ window.PRODUCTS = [
     badge: "New",
     tags: ["Originals"],
   },
+  {
+    shop: "catalog",
+    id: "abyss-beast",
+    name: "Abyss Beast",
+    price: 19.99,
+    size: "20 oz skinny",
+    description: "Many-eyed sea monster rising from a sunken shipwreck and ruins.",
+    image: "images/abyss-beast.jpg",
+    inStock: true,
+    personalize: false,
+    badge: "New",
+    tags: ["Artsy"],
+  },
 ];
 
 // The groups shown as buttons on the All page, in this order.
