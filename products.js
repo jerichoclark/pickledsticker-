@@ -546,6 +546,19 @@ window.PRODUCTS = [
     badge: "New",
     tags: ["Artsy"],
   },
+  {
+    shop: "catalog",
+    id: "cruisin-pickle",
+    name: "Cruisin' Pickle",
+    price: 19.99,
+    size: "20 oz skinny",
+    description: "Pickle dude cruising a red classic convertible down a palm-lined beach street.",
+    image: "images/cruisin-pickle.jpg",
+    inStock: true,
+    personalize: false,
+    badge: "New",
+    tags: ["Originals"],
+  },
 ];
 
 // The groups shown as buttons on the All page, in this order.
