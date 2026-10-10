@@ -507,12 +507,25 @@ window.PRODUCTS = [
     badge: "New",
     tags: ["Originals"],
   },
+  {
+    shop: "catalog",
+    id: "garage-project",
+    name: "Garage Project",
+    price: 19.99,
+    size: "20 oz skinny",
+    description: "Classic muscle car with the hood up in a busy repair shop.",
+    image: "images/garage-project.jpg",
+    inStock: true,
+    personalize: false,
+    badge: "New",
+    tags: ["Cars"],
+  },
 ];
 
 // The groups shown as buttons on the All page, in this order.
 // Add a new name here to make a new group, then put it in a cup's tags.
 window.TAGS = [
-  "Anime", "Artsy", "Baseball Teams", "Boy", "Canvas", "Controversial", "Custom",
+  "Anime", "Artsy", "Baseball Teams", "Boy", "Canvas", "Cars", "Controversial", "Custom",
   "Elementary School", "Football Teams", "Girl", "High School", "Middle School",
   "Originals", "Political",
 ];
