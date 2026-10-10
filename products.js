@@ -533,6 +533,19 @@ window.PRODUCTS = [
     badge: "New",
     tags: ["Originals"],
   },
+  {
+    shop: "catalog",
+    id: "graveyard-ghoul",
+    name: "Graveyard Ghoul",
+    price: 19.99,
+    size: "20 oz skinny",
+    description: "Horned zombie rising from a moonlit graveyard full of bats and thorns.",
+    image: "images/graveyard-ghoul.jpg",
+    inStock: true,
+    personalize: false,
+    badge: "New",
+    tags: ["Artsy"],
+  },
 ];
 
 // The groups shown as buttons on the All page, in this order.
