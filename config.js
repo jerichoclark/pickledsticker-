@@ -12,7 +12,7 @@ window.SHOP_CONFIG = {
   // Paste your PayPal "Client ID" between the quotes below.
   // (See SETUP-GUIDE.md, Step 2, for where to find it.)
   // Use the SANDBOX Client ID for testing, then swap to the LIVE one to take real money.
-  paypalClientId: "AS34d9JUgxINeWKKBeWYWKRKUbsqgb_Ei6Ox0QAGc8dnVBhi2Kk9xJ6ZKFtK6y9TjSqqeVVq1aouhXgk",
+  paypalClientId: "BAAr1y8Qac0dJaU172to2-fBZpVWOA_-Otly-YOWgJRAf8vbKx2QNkqqhxAKN3FlbqnfloPamejvNcTMjc",
 
   currency: "USD",
 
