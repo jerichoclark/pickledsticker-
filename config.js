@@ -17,7 +17,7 @@ window.SHOP_CONFIG = {
   currency: "USD",
 
   // ---- SHIPPING ----
-  flatShipping: 6.0,        // shipping cost per order, in dollars
+  flatShipping: 5.0,        // shipping cost per order, in dollars
   freeShippingOver: 75,     // orders at or above this amount ship free (set to 0 to turn off)
 
   // ---- CONTACT ----
