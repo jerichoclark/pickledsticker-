@@ -603,7 +603,7 @@ window.PRODUCTS = [
 // The groups shown as buttons on the All page, in this order.
 // Add a new name here to make a new group, then put it in a cup's tags.
 window.TAGS = [
-  "Anime", "Artsy", "Baseball Teams", "Boy", "Canvas", "Controversial", "Custom",
-  "Elementary School", "Football Teams", "Girl", "High School", "Middle School",
+  "Anime", "Artsy", "Boy", "Canvas", "Controversial", "Custom",
+  "Elementary School", "Girl", "High School", "Middle School",
   "Originals", "Political",
 ];
